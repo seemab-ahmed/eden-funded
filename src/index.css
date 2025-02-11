@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global css start */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Saira";
+  background: url(../src/assets/images/body-bg.png) no-repeat;
+  background-size: cover;
+  background-color: #091612;
+  background-position: center center;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(180deg,
+      rgba(2, 2, 1, 0.1) 0%,
+      rgba(16, 17, 14, 0.1) 100%);
+  box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.1) inset;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--Gradient-5,
+      linear-gradient(180deg, #99ffa3 0%, #68ee76 100%));
+  outline: 0.5px solid #fff;
+  border-radius: 30px;
+}
+
+.faqs::-webkit-scrollbar {
+  width: 4px;
+}
+
+.faqs::-webkit-scrollbar-track {
+  background: #222927;
+}
+
+.faqs::-webkit-scrollbar-thumb {
+  background: #222927;
+  border-radius: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a,
+span {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.stroke-text {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0EF3A5;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1230px;
+  }
+}
+
+/* global css end */
+
+/* fonts css start */
+@font-face {
+  font-family: "Saira";
+  src: url("../src/assets/fonts/Saira-Regular.woff2") format("woff2"),
+    url("../src/assets/fonts/Saira-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("../src/assets/fonts/Saira-ExtraBold.woff2") format("woff2"),
+    url("../src/assets/fonts/Saira-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("../src/assets/fonts/Saira-Italic.woff2") format("woff2"),
+    url("../src/assets/fonts/Saira-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("../src/assets/fonts/Saira-Black.woff2") format("woff2"),
+    url("../src/assets/fonts/Saira-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("../src/assets/fonts/Saira-Medium.woff2") format("woff2"),
+    url("../src/assets/fonts/Saira-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("../src/assets/fonts/Saira-Bold.woff2") format("woff2"),
+    url("../src/assets/fonts/Saira-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saira";
+  src: url("../src/assets/fonts/Saira-SemiBold.woff2") format("woff2"),
+    url("../src/assets/fonts/Saira-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* fonts css end */
+
+/* banner css start */
+/* .banner-img {
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 7.81%, #000 70.79%), url(../src/assets/images/ef-banner-img.png) lightgray -115.796px -105.369px / 126.743% 130.124% no-repeat;
+mix-blend-mode: color-dodge;
+background-position: center center;
+} */
+ 
+/* banner css end */
+
+/* reviews css start */
+.reviews .slick-list {
+  padding: 0px 80px 0 0 !important;
+}
+
+/* reviews css end */
+
+@keyframes float {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+.stone {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
