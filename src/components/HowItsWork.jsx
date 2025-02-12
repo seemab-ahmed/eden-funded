@@ -56,7 +56,7 @@ const HowItsWork = () => {
             </div>
             <img
               src={WorkImg}
-              className="max-md:order-1 max-md:mb-6 max-md:max-w-[350px]"
+              className="max-md:order-1 max-md:mb-6 max-md:max-w-[350px] float-animation"
               style={{ transform: "rotateY(-180deg)" }}
               alt="work-img"
             />
