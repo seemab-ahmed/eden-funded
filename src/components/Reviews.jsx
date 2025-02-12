@@ -65,7 +65,7 @@ const Reviews = () => {
   };
 
   return (
-    <section className="reviews py-20 max-md:py-12">
+    <section className="reviews py-20 max-md:py-12" id="reviews">
       <div className="container">
         {/* Title + Arrows */}
         <div className="mb-20 flex justify-between items-center">

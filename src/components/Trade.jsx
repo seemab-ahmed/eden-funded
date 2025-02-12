@@ -18,7 +18,7 @@ const Trade = () => {
             trading potential with expert strategies.
           </p>
           <Link
-            to=""
+            to="/"
             className="btn text-customDark max-w-[330px] w-full mx-auto bg-customGreen"
           >
             Get Started

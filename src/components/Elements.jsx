@@ -4,7 +4,7 @@ import AstronautImg from "../assets/images/element-img.png";
 
 const Elements = () => {
   return (
-    <section className="overflow-hidden py-20 max-md:py-8">
+    <section className="overflow-hidden py-20 max-md:py-8" id="about">
       <div className="container">
         <div className="grid grid-cols-2 gap-20 items-end max-md:grid-cols-1">
           <div className="max-md:hidden max-md:max-w-[350px]">
@@ -34,7 +34,7 @@ const Elements = () => {
               can trade anytime, anywhere.
             </p>
             <Link
-              to=""
+              to="/"
               className="btn bg-customTransparentWhite text-customLightGreen max-w-[263px] w-full h-[59px] max-md:max-w-[200px]"
             >
               Start Evaluation

@@ -4,16 +4,16 @@ import TwitterLogo from "../assets/images/new-twitter-ft.svg";
 import InstagramLogo from "../assets/images/instagram-ft.svg";
 import YoutubeLogo from "../assets/images/youtube-ft.svg";
 import FacebookLogo from "../assets/images/facebook-ft.svg";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   const navLinks = [
-    { name: "About Us", path: "/about" },
-    { name: "How it Works", path: "/how-it-works" },
-    { name: "Challenges", path: "/challenges" },
-    { name: "FAQ", path: "/faq" },
-    { name: "Reviews", path: "/reviews" },
-    { name: "Contact", path: "/contact" },
+    { name: "About Us", path: "about" },
+    { name: "How it Works", path: "how-it-works" },
+    { name: "Challenges", path: "challenges" },
+    { name: "FAQ", path: "faq" },
+    { name: "Reviews", path: "reviews" },
+    { name: "Contact", path: "contact" },
   ];
 
   return (
@@ -29,7 +29,8 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={item.path}
-                    className="text-base font-normal leading-none text-white"
+                    smooth={true} duration={500}
+                    className="text-base font-normal leading-none text-white cursor-pointer"
                   >
                     {item.name}
                   </Link>
@@ -39,22 +40,22 @@ const Footer = () => {
           </nav>
           <ul className="flex items-center gap-10">
             <li>
-              <Link to="">
+              <Link to="/">
                 <img src={TwitterLogo} alt="social-icons" />
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="/">
                 <img src={InstagramLogo} alt="social-icons" />
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="/">
                 <img src={FacebookLogo} alt="social-icons" />
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="/">
                 <img src={YoutubeLogo} alt="social-icons" />
               </Link>
             </li>
@@ -67,13 +68,13 @@ const Footer = () => {
           <ul className="flex items-center gap-8 max-md:flex-col max-md:gap-1">
             <li>
               <Link
-                to=""
+                to="/"
                 className="text-sm font-normal leading-none text-[#6F7572]"
               >Privacy Policy</Link>
             </li>
             <li>
               <Link
-                to=""
+                to="/"
                 className="text-sm font-normal leading-none text-[#6F7572]"
               >Virtual Funded Agreement</Link>
             </li>

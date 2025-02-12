@@ -55,7 +55,7 @@ const Products = () => {
   };
 
   return (
-    <section className="py-20 max-md:py-12">
+    <section className="py-20 max-md:py-12" id="challenges">
       <div className="container">
         {/* Title + Arrows */}
         <div className="mb-20 flex justify-between items-center max-md:mb-10">
@@ -109,7 +109,7 @@ const Products = () => {
                   {product.amount}
                 </span>
                 <Link
-                  to=""
+                  to="/"
                   className="btn text-customLightGreen bg-customTransparentWhite mb-6"
                 >
                   Get Start

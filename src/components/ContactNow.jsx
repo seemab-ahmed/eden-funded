@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const ContactNow = () => {
   return (
-    <section className="py-20 max-md:py-12">
+    <section className="py-20 max-md:py-12" id="contact">
       <div className="container">
         <div className="rounded-[20px] bg-primaryLight grid grid-cols-2 max-md:grid-cols-1 overflow-hidden">
           <div className="p-[60px] max-md:p-6">

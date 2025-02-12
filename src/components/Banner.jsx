@@ -26,22 +26,22 @@ const Banner = () => {
           </div> */}
           <ul className="absolute top-0 right-0 gap-2.5 hidden lg:grid">
             <li>
-              <Link to="">
+              <Link to="/">
                 <img src={TwitterLogo} alt="social-icons" />
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="/">
                 <img src={InstagramLogo} alt="social-icons" />
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="/">
                 <img src={YoutubeLogo} alt="social-icons" />
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="/">
                 <img src={FacebookLogo} alt="social-icons" />
               </Link>
             </li>
@@ -58,7 +58,7 @@ const Banner = () => {
               growth
             </p>
             <Link
-              to=""
+              to="/"
               className="btn max-w-[228px] mx-auto h-14 bg-customGreen"
             >
               Get Started
@@ -82,7 +82,7 @@ const Banner = () => {
             </li>
           </ul>
           <Link
-            to=""
+            to="/"
             className="absolute left-0 bottom-0 items-center animate-bounce delay-700 hidden lg:flex"
           >
             <img src={ArrowDown} alt="arrow" />

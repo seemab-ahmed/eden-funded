@@ -53,7 +53,7 @@ const Faqs = () => {
   };
 
   return (
-    <section className="py-20 max-md:py-12">
+    <section className="py-20 max-md:py-12" id="faq">
       <div className="container">
         <div className="text-center mb-20 max-md:mb-8">
           <h2 className="heading-2 text-customWhite mb-5 max-md:text-[32px]">

@@ -29,7 +29,7 @@ const Evaluation = () => {
               HFT passing is allowed, for a limited time.
             </p>
             <Link
-              to=""
+              to="/"
               className="btn bg-customTransparentWhite text-customLightGreen max-w-[263px] w-full max-md:max-w-[200px]"
             >
               Start Evaluation

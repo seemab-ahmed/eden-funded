@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import Logo from "../assets/images/eden-funding-logo.svg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "About Us", path: "/about" },
-    { name: "How it Works", path: "/how-it-works" },
-    { name: "Challenges", path: "/challenges" },
-    { name: "FAQ", path: "/faq" },
-    { name: "Reviews", path: "/reviews" },
-    { name: "Contact", path: "/contact" },
+    { name: "About Us", path: "about" },
+    { name: "How it Works", path: "how-it-works" },
+    { name: "Challenges", path: "challenges" },
+    { name: "FAQ", path: "faq" },
+    { name: "Reviews", path: "reviews" },
+    { name: "Contact", path: "contact" },
   ];
 
   return (
@@ -57,7 +57,8 @@ const Header = () => {
                   <li key={index}>
                     <Link
                       to={item.path}
-                      className="text-sm xl:text-base font-normal leading-none text-white"
+                      smooth={true} duration={500}
+                      className="text-sm xl:text-base font-normal leading-none text-white cursor-pointer"
                       onClick={() => setMenuOpen(false)}
                     >
                       {item.name}
@@ -69,7 +70,7 @@ const Header = () => {
             <ul className="flex flex-col lg:flex-row items-center gap-4">
               <li>
                 <Link
-                  to=""
+                  to="/"
                   className="btn bg-[rgba(255,255,255,0.05)] text-white h-11"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -78,7 +79,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/"
                   className="btn bg-[#0EF3A5] text-[#131414] h-11"
                   onClick={() => setMenuOpen(false)}
                 >

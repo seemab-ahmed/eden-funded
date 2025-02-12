@@ -24,7 +24,7 @@ const HowItsWork = () => {
     },
   ];
   return (
-    <section className="py-20 max-md:py-12">
+    <section className="py-20 max-md:py-12" id="how-it-works">
       <div className="container">
         <div className="grid grid-cols-2 gap-24 max-md:grid-cols-1 max-md:gap-0">
           <div className="max-md:flex max-md:flex-col">
@@ -38,7 +38,7 @@ const HowItsWork = () => {
               <ul className="grid grid-cols-2 max-w-[365px] gap-3 mb-16">
                 <li>
                   <Link
-                    to=""
+                    to="/"
                     className="btn text-customDark bg-customGreen px-10"
                   >
                     Get Started
@@ -46,7 +46,7 @@ const HowItsWork = () => {
                 </li>
                 <li>
                   <Link
-                    to=""
+                    to="/"
                     className="btn text-customLightGreen bg-customTransparentWhite px-10"
                   >
                     Learn More
