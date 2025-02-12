@@ -2,7 +2,7 @@ import React from "react";
 import EmailIcon from "../assets/images/email-icon.svg";
 import LocationIcon from "../assets/images/location-icon.svg";
 import ContactImg from "../assets/images/contact-img.png";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 
 const ContactNow = () => {
   return (
