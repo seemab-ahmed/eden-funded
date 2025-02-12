@@ -110,9 +110,9 @@ const Products = () => {
                 </span>
                 <Link
                   to="/"
-                  className="btn text-customLightGreen bg-customTransparentWhite mb-6"
+                  className="btn text-[#131414] bg-customGreen mb-6"
                 >
-                  Get Start
+                  Start Challenge
                 </Link>
                 <div className="flex items-center justify-center relative">
                   <span className="px-5 block bg-[#0a1e17] max-w-fit text-base font-normal leading-tight uppercase text-[#7B8581]">
