@@ -28,6 +28,8 @@ const Home = () => {
       <Faqs />
       <ContactNow />
       <Trade />
+
+
     </main>
   );
 };
