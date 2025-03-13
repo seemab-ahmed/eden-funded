@@ -62,8 +62,9 @@ const HowItsWork = () => {
             />
           </div>
           <div className="grid gap-4">
-            {workCards.map((item) => (
+            {workCards.map((item, index) => (
               <div
+              key={index}
                 className="p-10 bg-primaryLight border border-darkGray rounded-[32px] max-w-[485px] ml-auto w-full
               max-md:p-6 max-md:ml-0"
               >
@@ -82,6 +83,7 @@ const HowItsWork = () => {
           </div>
         </div>
       </div>
+      
     </section>
   );
 };

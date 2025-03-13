@@ -8,15 +8,22 @@ import Reviews from "../components/Reviews";
 import Faqs from "../components/Faqs";
 import ContactNow from "../components/ContactNow";
 import Trade from "../components/Trade";
+import StatsSection from "../components/StatsSection";
+import TradingPlatforms from "../components/TradingPlatforms";
+import InstantFunding from "../components/InstantFunding";
+
 
 const Home = () => {
   return (
-    <main>
+    <main >
       <Banner />
       <Evaluation />
       <Elements />
+      <StatsSection />
       <HowItsWork />
+      <TradingPlatforms />
       <Products />
+      <InstantFunding/>
       <Reviews />
       <Faqs />
       <ContactNow />

@@ -16,6 +16,9 @@ module.exports = {
         primaryLight: "rgba(11, 172, 117, 0.05)",
         darkGray: "rgba(49, 60, 56, 0.40)",
       },
+      fontFamily: {
+        syne: ['Syne', 'sans-serif'],
+      },
     },
     boxShadow: {
       custom: "0px 28px 44px 0px rgba(14, 243, 165, 0.30)",

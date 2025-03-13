@@ -83,7 +83,7 @@ const Header = () => {
                   className="btn bg-[#0EF3A5] text-[#131414] h-11"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Start Challenge
+                  Enter the Portal
                 </Link>
               </li>
             </ul>

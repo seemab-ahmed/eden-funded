@@ -56,6 +56,8 @@ const Reviews = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     centerPadding: "80px",
     arrows: false,
     responsive: [
@@ -104,7 +106,9 @@ const Reviews = () => {
         <Slider ref={sliderRef} {...sliderSettings}>
           {reviewsData.map((review, index) => (
             <div key={index} className="px-2">
-              <div className="reviews-card p-8 bg-primaryLight border border-darkGray rounded-3xl max-md:p-4">
+              <div className="reviews-card p-8 min-h-[335px] bg-primaryLight border border-darkGray rounded-3xl max-md:p-4
+              flex flex-col justify-between ">
+                <div>
                 <div className="flex items-center gap-3 mb-8">
                   <img src={StarImg} alt="star-img" />
                   <img src={StarImg} alt="star-img" />
@@ -113,6 +117,7 @@ const Reviews = () => {
                   <img src={StarImg} alt="star-img" />
                 </div>
                 <p className="para-1 text-customGray mb-6">"{review.review}"</p>
+                </div>
                 <div className="flex items-center gap-2">
                   <span className="text-2xl font-medium leading-none text-[#9EA3A1] max-md:text-lg">
                     – {review.name}

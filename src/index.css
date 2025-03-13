@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* syne font on TradingPlatforms component  */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 /* global css start */
-
 * {
   margin: 0;
   padding: 0;
@@ -13,10 +14,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Saira";
-  background: url(../src/assets/images/body-bg.png) no-repeat;
-  background-size: cover;
+  background: url(../src/assets/images/dots-bg.webp) repeat;
+  background-size: 25%;
   background-color: #091612;
-  background-position: center center;
+  background-position: top center;
 }
 
 body::-webkit-scrollbar {
