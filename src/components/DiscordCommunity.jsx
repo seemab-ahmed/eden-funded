@@ -1,7 +1,6 @@
 export default function DiscordCommunity() {
     return (
-      <div className="max-w-full w-[95%] mx-auto bg-cover bg-center flex flex-col items-center justify-center text-white rounded-[30px] border-2 border-[#B6FFB9] border-opacity-5 py-24  p-10 max-md:px-5 bg-[rgba(11,172,118,0.06)]"
-        style={{ backgroundImage: 'url(/your-background-image.jpg)' }}>
+      <div className="max-w-full w-[1230px] mx-auto bg-cover bg-center flex flex-col items-center justify-center text-white rounded-[30px] border-2 border-[#B6FFB9] border-opacity-5 py-24  p-10 max-md:px-5 bg-[rgba(11,172,118,0.06)]">
         
         <h4 className="text-[18px] uppercase tracking-wide">Your Journey Starts Here</h4>
         <h1 className="text-[56px] font-semibold mt-4">Join Our Discord Community</h1>

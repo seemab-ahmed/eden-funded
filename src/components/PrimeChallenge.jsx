@@ -35,7 +35,7 @@ const PrimeChallenge = () => {
   return (
     <section className=" text-white py-28 max-md:py-12 ">
     <div
-      className="flex flex-col items-center max-w-full w-[95%] mx-auto px-4 text-center border-opacity-5  p-10
+      className="flex flex-col items-center w-[1621px] max-w-full mx-auto px-4 text-center border-opacity-5  p-10
       max-md:px-5"
     >
       <h2 className="text-5xl font-medium my-4 max-md:text-4xl w-full max-w-[850px] leading-[62px] pb-[88px]">
