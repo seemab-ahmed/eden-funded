@@ -4,13 +4,14 @@ import CowImage from "../assets/images/cowImg.png";
 
 const HowWeHelp = () => {
   return (
-    <section className="px-14 text-white mt-[180px]">
-      <div className=" w-[1621px] max-w-full mx-auto rounded-[30px] border-2 border-[#B6FFB9] border-opacity-5 bg-[rgba(11,172,117,0.04)]">
+    <section className=" relative z-index-50 ">
+      <div className="max-w-[1620px] w-[90%] mx-auto rounded-[80px] bg-[rgba(121,152,255,0.04)] backdrop-blur-[25px]">
+
       <h2 className='text-white text-center text-[48px] font-semibold leading-[62px] pt-[88px] pb-[16px]'>
          How We Help  Empower Traders
             </h2>
-            <p className='text[18px] leading-[28px] text-center pb-[88px]'>How to become a Eden-fx trader</p>
-            <div className="flex items-center justify-between">
+            <p className='text[18px] text-white leading-[28px] text-center pb-[88px]'>How to become a Eden-fx trader</p>
+            <div className="flex items-center justify-between text-white">
         <div className="w-[580px] pl-[50px]">
           <h2 className="font-medium text-[48px] leading-[62.5px]">
             Why Our Assessment Process?
@@ -37,7 +38,7 @@ const HowWeHelp = () => {
           className="p-10 w-[761px] h-[513px] "
         />
         </div>
-      </div>
+        </div>
     </section>
   );
 };

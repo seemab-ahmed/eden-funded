@@ -21,7 +21,7 @@ const ContactNow = () => {
             </div>
             <form className="grid grid-cols-12 gap-x-6 gap-y-12 max-md:gap-7  max-md:grid-cols-1">
               <div className="col-span-6 max-md:col-span-1">
-                <label className="text-lg font-medium leading-none text-customWhite mb-1">
+                <label className="text-lg font-medium leading-[1] text-customWhite mb-1">
                   Your name*
                 </label>
                 <input

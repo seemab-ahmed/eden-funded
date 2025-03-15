@@ -59,7 +59,7 @@ const Products = () => {
       <div className="container">
         {/* Title + Arrows */}
         <div className="mb-20 flex justify-between items-center max-md:mb-10">
-          <h2 className="heading-2 text-customWhite max-md:text-[32px]">Products</h2>
+          <h2 className="heading-2 text-customWhite max-md:text-[32px]">Challenge Types</h2>
           <div className="arrows flex gap-4">
             <button
               onClick={handlePrevClick}
