@@ -7,7 +7,7 @@ import starImage from "../assets/images/dots-bg.webp";
 
 const Evaluation = () => {
   return (
-    <section className="overflow-hidden pb-20 max-md:pb-8 relative bg-[#091612]">
+    <section className="overflow-hidden pb-20 max-md:pb-8 relative bg-[#091612] lg:-mt-24">
       <div className="container relative">
         <div className="grid grid-cols-2 gap-20 items-end max-md:grid-cols-1">
           <div className="relative z-[2]">

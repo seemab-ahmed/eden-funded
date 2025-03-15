@@ -16,7 +16,13 @@ import InstantFunding from "../components/InstantFunding";
 const Home = () => {
   return (
     <main >
-      <Banner />
+      <Banner
+        preheader="Welcome to Eden Funding"
+        heading="Unlock Up To 500k"
+        description="In Simulated Funding, Powered By MT5"
+        btnText="Start"
+        isHome={true}
+      />
       <Evaluation />
       <Elements />
       <StatsSection />

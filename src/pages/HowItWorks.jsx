@@ -11,7 +11,12 @@ import StartChallenge from '../components/StartChallenge'
 const HowItWorks = () => {
   return (
     <main>
-        <Banner />
+        <Banner
+        preheader="Trade forex, Build Wealth, Simplified"
+        heading="How It Works"
+        description="Systems to help you grow, as you scale up with Eden-FX "
+        btnText="Get Started"
+      />
         <HowWeHelp />
         <PrimeChallenge />
         <EvaluationRules />

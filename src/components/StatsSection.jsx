@@ -7,15 +7,15 @@ const StatsSection = () => {
   const statsData = [
     {
       id: 1,
-      end: 1280000,
+      end: 183000,
       prefix: '$',
       suffix: '+',
       duration: 2.5,
-      description: 'Total Payouts to Our Traders',
+      description: 'Payouts Deployed',
     },
     {
       id: 2,
-      end: 17241,
+      end: 8300,
       prefix: '$',
       suffix: '+',
       duration: 2.5,
@@ -23,7 +23,7 @@ const StatsSection = () => {
     },
     {
       id: 3,
-      end: 15400,
+      end: 3000,
       prefix: '$',
       suffix: '+',
       duration: 2.5,
@@ -42,12 +42,11 @@ const StatsSection = () => {
       <div className="max-w-full w-[90%] mx-auto px-4 text-center">
         {/* Section Title */}
         <h2 className="text-5xl font-medium mb-4 max-md:text-4xl">
-          Proven Success, Global Impact
+          Eden Statistics Since Launch
         </h2>
         {/* Section Subtitle */}
         <p className="text-lg text-white text-opacity-50 mb-20 max-w-[585px] mx-auto max-md:text-base">
-          Become part of a thriving global trading community. With substantial payouts, 
-          top traders earning impressive rewards.
+        Proven Track Record. Proven Model. Scale your trading with Eden.
         </p>
 
         {/* Stats Cards */}
