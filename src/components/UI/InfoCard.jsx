@@ -1,21 +1,20 @@
 import React from 'react'
 
-const InfoCard = ({ title, percentage, description }) => {
+const EvalutionCard = ({ title, percentage, description }) => {
     return (
-      <div className="flex flex-wrap bg-[#334b3b] text-white p-6 rounded-2xl shadow-lg w-full max-w-[400px] h-[410px] border border-green-800">
-        <div className="flex flex-col items-start gap-8">
-          <div className="bg-green-600 p-8 rounded-full flex items-start">
+      <div className="flex flex-col items-start gap-6 bg-[#334b3b] text-white pt-12 pr-16 pb-16 pl-[30px] rounded-2xl shadow-lg w-full max-w-[470px] h-[431px] border border-green-800">
+          <div className="bg-green-600 w-8 h-8 rounded-full flex items-start">
             {/* <Icon className="text-white w-6 h-6" /> */}
           </div>
-          <h2 className="text-xl font-semibold">
+          <h2 className="text-[32px] font-semibold pt-2">
             {title}: <span className="text-gray-300">{percentage}</span>
           </h2>
-        </div>
-        <p className="mt-3 text-start text-sm leading-relaxed text-gray-300">
+        
+        <p className="text-start text-[16px] leading-relaxed text-gray-300">
           {description}
         </p>
       </div>
     );
   };
 
-export default InfoCard
+export default EvalutionCard;
