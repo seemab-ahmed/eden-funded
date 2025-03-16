@@ -19,10 +19,13 @@ module.exports = {
       fontFamily: {
         syne: ['Syne', 'sans-serif'],
       },
-    },
-    boxShadow: {
-      custom: "0px 28px 44px 0px rgba(14, 243, 165, 0.30)",
-      greenInset: "0px 1px 8px 0px rgba(52, 232, 170, 0.30) inset"
+      boxShadow: {
+        custom: "0px 28px 44px 0px rgba(14, 243, 165, 0.30)",
+        greenInset: "0px 1px 8px 0px rgba(52, 232, 170, 0.30) inset",
+      },
+      backgroundImage: {
+        'border-line': 'radial-gradient(16652.99% 50% at 50% 50%, #0EF3A5 0%, rgba(14, 243, 165, 0.00) 100%)',
+      },
     },
   },
   plugins: [
@@ -74,4 +77,3 @@ module.exports = {
     },
   ],
 }
-
