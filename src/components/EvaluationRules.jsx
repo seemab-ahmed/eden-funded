@@ -40,14 +40,16 @@ const EvaluationRules = () => {
     },
   ];
   return (
-    <section className=" text-white max-md:py-12 ">
+    <section className=" text-white py-16 relative z-[2] max-md:pt-28">
       <div
-        className="flex flex-col items-center mx-auto text-center border-opacity-5"
+        className="max-w-[1620px] w-[90%] mx-auto"
       >
-        <h2 className="text-5xl font-medium my-4 max-md:text-4xl w-full max-w-[850px] leading-[62px] pb-[88px]">
+        <h2 className="text-5xl text-center mx-auto font-medium my-4 max-md:text-4xl w-full max-w-[850px] leading-[1.1] mb-[88px] max-md:mb-10">
         Our Standard/Swing Evaluation Rules
         </h2>
-        <div className="flex flex-wrap justify-center gap-6 items-center max-w-[1620px] px-16 py-28 mx-auto text-center rounded-[30px] border-2 border-[#B6FFB9] border-opacity-5 bg-op bg-[rgba(11,172,117,0.04)]">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 max-xl:gap-5 max-lg:gap-6  px-[3%] py-28 text-center rounded-[80px] 
+                   bg-sec-radial backdrop-blur-[25px] border-2 border-[#fff] 
+                   border-opacity-10 pt-[60px] pb-[105px] max-md:rounded-[30px]">
           {InfoCardData.map((item, index) => (
             <EvalutionCard
               key={index}
@@ -57,6 +59,8 @@ const EvaluationRules = () => {
               description={item.description}
             />
           ))}
+        <div className="absolute inset-[-2px_0_auto] w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+
         </div>
       </div>
     </section>

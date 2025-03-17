@@ -1,4 +1,5 @@
 import Banner from '../components/Banner'
+import CareerTrading from '../components/CareerTrading'
 import CustomerSupport from '../components/CustomerSupport'
 import DiscordCommunity from '../components/DiscordCommunity'
 import EvaluationRules from '../components/EvaluationRules'
@@ -21,6 +22,8 @@ const HowItWorks = () => {
         <PrimeChallenge />
         <EvaluationRules />
         <ExpressRules />
+        <CareerTrading />
+        
         <StartChallenge />
         <ScaleUp />
         <CustomerSupport/>
