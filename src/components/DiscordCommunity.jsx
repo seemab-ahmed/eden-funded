@@ -3,34 +3,38 @@ import DiscordBgImg from "../assets/images/discordCommunity.png";
 export default function DiscordCommunity() {
   return (
     <section className="">
-      <div className=" max-w-[1230px] w-[90%] mx-auto">
+      <div className=" max-w-[1230px] w-[90%] mx-auto ">
         <div
-          className=" flex flex-col items-center justify-center text-white rounded-[32px] border-2 border-[#B6FFB9] border-opacity-5 py-24 p-10 max-md:px-5 bg-[rgba(11,172,118,0.06)]"
+          className=" text-white rounded-[32px] text-center 
+          border border-[rgba(49,60,56,0.40)] px-10 py-[100px] max-md:px-5 bg-[rgba(11,172,117,0.05)] bg-no-repeat
+          max-lg:py-20 max-md:py-12"
           style={{
             backgroundImage: `url(${DiscordBgImg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <h4 className="text-[18px] uppercase tracking-wide">
+          <span className="text-lg font-syne leading-snug uppercase tracking-[0.9px] text-[#FDFEFE] mb-4 max-md:mb-3 max-md:text-base">
             Your Journey Starts Here
-          </h4>
-          <h1 className="text-[56px] font-semibold mt-4">
+          </span>
+          <h2 className="text-[56px] font-semibold leading-[1.2] mb-8 max-lg:mb-6 max-md:mb-5 text-[#FDFEFE]
+          max-xl:text-5xl max-lg:text-4xl max-md:text-3xl">
             Join Our Discord Community
-          </h1>
-          <h2 className="text-[40px] mt-8 font-semibold">Dive Into Eden-FX</h2>
-          <p className="mt-4 text-center max-w-[694px] text-[20px]">
+          </h2>
+          <h3 className="text-[40px] font-medium text-white leading-[1.3]
+          max-xl:text-4xl max-lg:text-3xl max-md:text-2xl">Dive Into Eden-FX</h3>
+          <p className="my-4 mx-auto text-center max-w-[694px] text-xl font-syne max-lg:text-lg max-md:text-base">
             Sign up now to enter into our monthly $100k giveaway! And more
             exclusive giveaways, discounts & promotions.
           </p>
 
-          <div className="mt-6 px-2 py-2 flex items-center bg-white rounded-full overflow-hidden shadow-lg text-sm w-full max-w-[531px]">
+          <div className=" px-2 py-2 mx-auto flex items-center justify-between bg-white rounded-full overflow-hidden shadow-lg text-sm w-full max-w-[531px]">
             <input
               type="email"
               placeholder="Enter Your Email"
-              className="flex-grow px-4 py-3 text-gray-700 outline-none"
+              className="flex-grow px-4 py-3 text-gray-700 outline-none max-w-[80%] max-md:max-w-[50%]"
             />
-            <button className="bg-green-500 text-white text-[16px] px-[58px] py-4 rounded-full font-semibold">
+            <button className="btn bg-[#0EF3A5] text-black text-[16px] max-w-[184px] py-[15px] h-[55px] rounded-[50px] font-semibold">
               Join Now
             </button>
           </div>

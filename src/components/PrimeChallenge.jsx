@@ -43,10 +43,10 @@ const PrimeChallenge = () => {
       bg-sec-radial backdrop-blur-[25px] border-2 border-[#B6D3FF] border-opacity-10 bg-no-repeat"
         >
           <div className="p-[40px_28px_28px] rounded-[40px] text-white text-center bg-no-repeat bg-card-bg
-          border border-[#B6D3FF] border-opacity-10">
-            <h2 className="text-[31px] font-medium  mb-[66px]">
+          border border-[#B6D3FF] border-opacity-10 flex flex-col justify-between">
+            <h4 className="text-[31px] font-medium  mb-[20px] max-2xl:text-[28px] max-xl:text-2xl max-lg:text-xl">
               Unlock Instant Funding
-            </h2>
+            </h4>
             <ul className="flex flex-col gap-3">
               {instantFunding.map((item, index) => (
                 <li
@@ -61,7 +61,7 @@ const PrimeChallenge = () => {
           </div>
           <div className="p-[40px_28px_28px] rounded-[40px] text-white text-center bg-no-repeat bg-card-bg
           border border-[#B6D3FF] border-opacity-10 flex flex-col justify-between">
-            <h2 className="text-[20px] ">When You Trade With</h2>
+            <h4 className="text-[20px] ">When You Trade With</h4>
             <img
               src={Logo}
               alt="Eden Funding Logo"
@@ -81,8 +81,8 @@ const PrimeChallenge = () => {
           </div>
           <div className="p-[40px_28px_28px] rounded-[40px] text-white text-center bg-no-repeat bg-card-bg
           border border-[#B6D3FF] border-opacity-10 flex flex-col justify-between">
-            <h2 className="text-xl mb-4">When You Trade With</h2>
-            <h1 className="text-center text-[31px] font-[500] pb-4">Other</h1>
+            <h4 className="text-xl mb-4">When You Trade With</h4>
+            <h5 className="text-center text-[31px] font-medium mb-4 max-2xl:text-[28px] max-xl:text-2xl max-lg:text-xl">Other</h5>
             <ul className="flex flex-col gap-3">
               {withOther.map((item, index) => (
                 <li
