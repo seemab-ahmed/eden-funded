@@ -23,10 +23,10 @@ const HowItWorks = () => {
         <EvaluationRules />
         <ExpressRules />
         <CareerTrading />
-        
         <StartChallenge />
         <ScaleUp />
         <CustomerSupport/>
+        
         <DiscordCommunity />
     </main>
   )
