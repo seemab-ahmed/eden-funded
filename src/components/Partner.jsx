@@ -3,18 +3,31 @@ import { Link } from "react-router-dom";
 
 const Partner = () => {
   return (
-    <div className="max-w-full w-[1132px] mx-auto mt-[180px] bg-cover bg-center flex flex-col items-center justify-center text-white rounded-[30px] border-2 border-[#B6FFB9] border-opacity-5 bg-[rgba(11,172,118,0.06)]">
-      <h1 className="text-[48px] pt-[118px] pb-5 font-semibold">Be A Partner</h1>
-      <p className=" w-[713px] text-[16px] text-center leading-5 font-medium">
-        Help Grow The Eden-FX Family
+    <section className="relative">
+      <div className="py-[147px] max-md:py-24 bg-[rgba(157,255,222,0.04)] backdrop-blur-[20px] ">
+      <div className="max-w-[1132px] w-[90%] mx-auto">
+        <div className="rounded-[10px] relative bg-sec-radial backdrop-blur-[5px] bg-[rgba(157,255,222,0.04)]
+        pt-[118px] pb-[87px] text-white max-md:py-12 px-[3%] text-center z-[1]">
+        <h2 className="font-bold text-5xl max-lg:text-4xl max-md:text-3xl leading-[1.2]">Be A Partner</h2>
+      <p className="mt-5 mb-[50px] max-w-[713px] text-base text-center leading-tight font-medium mx-auto font-syne">
+      Help Grow The Eden-FX Family
       </p>
       <Link
         to="/"
-        className="btn text-white text-[16px] max-w-[170px] w-full  border-[#B6FFB9] border-opacity-5 border-2 mt-[50px] mb-[117px] bg-[rgba(11,172,118,0.23)]"
+        className="btn text-white text-[16px] max-w-[170px] w-full border-[rgba(14,242,165,0.30)]
+                           border mt-6 bg-btn-bg relative z-[5] mx-auto font-bold"
       >
-        Be a Partner
+         Be a Partner
       </Link>
-    </div>
+      <div className="absolute inset-[0px_0_auto] w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+        </div>
+      </div>
+      </div>
+      {/* <div className="w-[40%] max-w-[440px] inset-[auto_auto_-27%_0] absolute z-[-1]
+      max-xl:inset-[auto_auto_-20%_0] max-lg:inset-[auto_auto_-15%_0]">
+        <img src={Planet} alt="Planet" />
+      </div> */}
+    </section>
   );
 };
 

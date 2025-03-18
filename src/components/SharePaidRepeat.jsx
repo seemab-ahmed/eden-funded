@@ -1,4 +1,5 @@
 import React from 'react'
+import globeBg from "../assets/images/earthAbout.webp"
 
 const SharePaidRepeat = () => {
     const tierOne = [
@@ -12,7 +13,6 @@ const SharePaidRepeat = () => {
         "15% Commissions",
         "Coupon Remains At 7.5%",
         "Free look Challenge",
-
     ];
 
     const tierThree = [
@@ -22,56 +22,44 @@ const SharePaidRepeat = () => {
         "$3000 Cash",
     ];
 
-  return (
-    <section className='px-14'>
-        <div className='w-[95%] max-w-full mx-auto'>
-            <h2 className='text-white text-center text-[48px] font-semibold leading-[62px] pb-[88px]'>
-                Share, Get Paid, Repeat!
-            </h2>
-            <div className='w-[1621px] max-w-full mx-auto py-8 md:py-[50px] lg:py-[80px] px-[136px] bg-gradient-to-r from-green-900 via-green-700 to-green-900 rounded-[30px] border-2 border-[#B6FFB9] border-opacity-5 bg-[rgba(11,172,117,0.04)] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10  justify-center'>
-            <div className="bg-gradient-to-b from-green-950 to-green-700 p-6 rounded-[30px] shadow-lg w-full max-w-[424px] text-white text-center">
-      <h2 className="text-[31px] font-[500px]  pb-[66px]">Tier 1</h2>
-      <ul className="space-y-4">
-        {tierOne.map((item, index) => (
-          <li
-            key={index}
-            className="border-t border-green-500 pb-7 pt-3 text-[20px] font-thin"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-            <div className="bg-gradient-to-b from-green-950 to-green-700  rounded-[30px] shadow-lg w-full max-w-[424px] text-white text-center">
-      <h2 className="text-[31px] font-[500px] pt-10 pb-[66px]">Tier 2</h2>
-      <ul className="space-y-4">
-        {tierTwo.map((item, index) => (
-          <li
-            key={index}
-            className="border-t border-green-500 pb-7 pt-2 text-[20px] font-thin"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-            <div className="bg-gradient-to-b from-green-950 to-green-700 p-6 rounded-[30px] shadow-lg w-full max-w-[424px] text-white text-center">
-      <h2 className="text-[31px] font-[500px]  pb-[66px]">Tier 3</h2>
-      <ul className="space-y-4">
-        {tierThree.map((item, index) => (
-          <li
-            key={index}
-            className="border-t border-green-500 pb-7 pt-2 text-[20px] font-thin"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-    </div>
-        </div>
-    </section>
-  )
+    return (
+        <section className="text-white py-[120px] max-md:py-12 relative">
+            <div className="max-w-[1620px] w-[90%] mx-auto">
+                <h2 className="text-5xl font-medium text-center max-md:text-4xl w-full max-w-[850px] leading-[1.2] mx-auto">
+                    Share, Get Paid, Repeat!
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-xl:gap-6 relative z-[2]
+                    max-w-full mt-[83px] pt-[73px] pb-[80px] mx-auto px-[5%] text-center rounded-[80px] max-md:rounded-[40px]
+                    bg-sec-radial backdrop-blur-[25px] border-2 border-[#B6D3FF] border-opacity-10 bg-no-repeat">
+                    
+                    {[tierOne, tierTwo, tierThree].map((tier, index) => (
+                        <div key={index} className="p-[40px_28px_28px] rounded-[40px] text-white text-center bg-no-repeat bg-card-bg
+                            border border-[#B6D3FF] border-opacity-10 flex flex-col justify-between">
+                            <h4 className="text-[31px] font-medium mb-[20px] max-2xl:text-[28px] max-xl:text-2xl max-lg:text-xl">
+                                Tier {index + 1}
+                            </h4>
+                            <ul className="flex flex-col gap-3 relative">
+                                <div className="absolute inset-[-1px_0_auto] w-[90%] h-[1px] bg-divider mx-auto block"></div>
+                                {tier.map((item, i) => (
+                                    <li key={i} className="pt-3 pb-1 text-xl font-normal font-syne relative border-t border-[#0EF3A5] border-opacity-5">
+                                        <span>{item}</span>
+                                        <div className="absolute inset-[-1px_0_auto] w-[90%] h-[1px] bg-divider mx-auto block"></div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                    
+                    <div className="absolute inset-[-2px_0_auto] w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+                </div>
+            </div>
+              {/* Globe Background */}
+          <div className="absolute right-0 top-[-160px] bottom-[-100px] w-[30%] max-w-[660px] z-[-1] 
+                max-xl:bottom-[-80px] max-lg:bottom-[-60px]">
+                <img src={globeBg} alt="Robot" className="w-full" />
+            </div>
+        </section>
+    )
 }
 
-export default SharePaidRepeat
+export default SharePaidRepeat;

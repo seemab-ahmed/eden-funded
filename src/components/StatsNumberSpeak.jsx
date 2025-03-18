@@ -70,9 +70,9 @@ const StatsNumberSpeak = () => {
             ({ id, end, prefix, suffix, duration, description }) => (
               <div
                 key={id}
-                className="relative bg-[rgba(121,255,150,0.04)] border border-[#C3FFCD] border-opacity-5 rounded-[48px] px-6 py-10 min-h-[169px] w-[466px] max-w-full flex flex-col items-center justify-center "
+                className="relative bg-[rgba(121,255,150,0.04)] border border-[#C3FFCD] border-opacity-5 rounded-[24px] px-6 py-10 min-h-[169px] w-[466px] max-w-full flex flex-col items-center justify-center "
               >
-                <h3 className="text-5xl font-bold max-xl:text-4xl max-md:text-3xl max-sm:text-2xl">
+                <h3 className="text-[32px] font-bold max-xl:text-4xl max-md:text-3xl max-sm:text-2xl">
                   {inView ? (
                     <CountUp
                       end={end}
@@ -101,9 +101,9 @@ const StatsNumberSpeak = () => {
               ({ id, end, prefix, suffix, duration, description }) => (
                 <div
                   key={id}
-                  className="relative bg-[rgba(121,255,150,0.04)] border border-[#C3FFCD] border-opacity-5 rounded-[48px] px-6 py-10 min-h-[169px]  max-w-[466px] lg:w-[356px] flex flex-col items-center justify-center"
+                  className="relative bg-[rgba(121,255,150,0.04)] border border-[#C3FFCD] border-opacity-5 rounded-[24px] px-6 py-10 min-h-[169px]  max-w-[466px] lg:w-[356px] flex flex-col items-center justify-center"
                 >
-                  <h3 className="text-5xl font-bold max-xl:text-4xl max-md:text-3xl max-sm:text-2xl">
+                  <h3 className="text-[32px] font-bold max-xl:text-4xl max-md:text-3xl max-sm:text-2xl">
                     {inView ? (
                       <CountUp
                         end={end}
@@ -130,9 +130,9 @@ const StatsNumberSpeak = () => {
             {statsDataThree.map(({ id, text, description }) => (
               <div
                 key={id}
-                className="relative bg-[rgba(121,255,150,0.04)] border border-[#C3FFCD] border-opacity-5 rounded-[48px] px-6 py-10 min-h-[170px] w-full max-w-[466px] lg:w-[356px] flex flex-col items-center justify-center"
+                className="relative bg-[rgba(121,255,150,0.04)] border border-[#C3FFCD] border-opacity-5 rounded-[24px] px-6 py-10 min-h-[170px] w-full max-w-[466px] lg:w-[356px] flex flex-col items-center justify-center"
               >
-                <h3 className="text-5xl font-bold max-xl:text-4xl max-md:text-3xl max-sm:text-2xl">
+                <h3 className="text-[32px] font-bold max-xl:text-4xl max-md:text-3xl max-sm:text-2xl">
                   {text}
                 </h3>
                 <p className="mt-2 text-white text-opacity-50 text-[24px] max-md:text-base">
@@ -149,9 +149,9 @@ const StatsNumberSpeak = () => {
               ({ id, end, prefix, suffix, duration, description }) => (
                 <div
                   key={id}
-                  className="relative bg-[rgba(121,255,150,0.04)] border border-[#C3FFCD] border-opacity-5 rounded-[48px] px-6 py-10 min-h-[170px] max-w-[466px] lg:w-[356px] flex flex-col items-center justify-center"
+                  className="relative bg-[rgba(121,255,150,0.04)] border border-[#C3FFCD] border-opacity-5 rounded-[24px] px-6 py-10 min-h-[170px] max-w-[466px] lg:w-[356px] flex flex-col items-center justify-center"
                 >
-                  <h3 className="text-[12px] font-bold max-xl:text-4xl max-md:text-3xl max-sm:text-2xl">
+                  <h3 className="text-[32px] font-bold max-xl:text-4xl max-md:text-3xl max-sm:text-2xl">
                     {inView ? (
                       <CountUp
                         end={end}
