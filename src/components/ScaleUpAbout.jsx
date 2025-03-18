@@ -1,24 +1,49 @@
 import React from "react";
 import ScaleUpImg from "../assets/images/scaleupAboutImg.png";
-import LightBg from "../assets/images/BG.png"
+import Planet from "../assets/images/2m-globe.webp";
+import Robot from "../assets/images/Vector-about.svg";
 
 const ScaleUpAbout = () => {
     return (
-        <section className=' px-14 text-white mt-[242px] mb-[180px]'>
-    <div className='relative flex flex-wrap items-center max-w-[90%] mx-auto rounded-[80px] border-2 border-[#B6FFB9] border-opacity-5 bg-[rgba(11,172,117,0.04)]'>
-       <img src={ScaleUpImg} alt="heart iamge" className='p-10 w-[758px] h-auto lg:h-[629px] ' />
-       <div className='mx-3 lg-mx-0 w-full lg:w-[488px] lg:pl-[50px] text-center lg:text-start'>
-           <h2 className='font-medium sm:text-xl md:text-2xl lg:text-[48px] leading-[29px] lg:leading-[62.5px]'>Scale Up To 2M</h2>
-           <p className='text-sm md:text-[16px] lg:text-[18px] leading-[22px] lg:leading-[29px] py-[20px]'>We help you build the skill, maximize your profits and become the asset. Trade our funds and receive up to 90% profit!</p>
-       </div>
-       <img
-          src={LightBg}
-          alt="background-image"
-          className="w-[] h-[] absolute top-0 left-0"
-        />
-       </div>
-       </section> 
-      )
+        <section className="py-[180px] relative">
+            <div className="max-w-[1620px] w-[90%] mx-auto">
+                <div className="rounded-[80px] p-10 max-xl:px-[3%] grid grid-cols-1 
+                    md:grid-cols-2 gap-[90px] max-2xl:gap-12 max-xl:gap-9 items-center
+                    bg-sec-radial backdrop-blur-[25px] border-2 border-[#B6D3FF] 
+                    border-opacity-10 text-white max-lg:rounded-[40px] relative z-10">
+                    
+                    <div className="max-md:order-2">
+                        <img src={ScaleUpImg} alt="Scale Up" className="w-full" />
+                    </div>
+                    
+                    <div className="max-md:order-1 max-md:text-center">
+                        <h3 className="font-medium text-5xl max-lg:text-4xl max-md:text-3xl leading-[1.2] max-w-[488px] max-md:mx-auto">
+                            Scale Up To 2M
+                        </h3>
+                        <p className="text-[18px] leading-[1.4] font-normal mt-[20px] max-w-[488px]
+                            font-syne text-[rgba(216,218,255,0.60)] max-md:mx-auto">
+                            We help you build the skill, maximize your profits and become the asset. Trade our funds and receive up to 90% profit!
+                        </p>
+                    </div>
+
+                    {/* Horizontal Line */}
+                    <div className="absolute bottom-0 inset-x-0 w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+                </div>
+            </div>
+
+            {/* Planet Image - Left Side */}
+            <div className="absolute left-0 bottom-[-90px] w-[40%] max-w-[550px] z-[-1] 
+                max-xl:bottom-[-80px] max-lg:bottom-[-60px]">
+                <img src={Planet} alt="Planet" className="w-full" />
+            </div>
+
+            {/* Robot Image - Right Side */}
+            <div className="absolute right-0 top-[-200px] bottom-[-100px] w-[30%] max-w-[780px] z-[-1] 
+                max-xl:bottom-[-80px] max-lg:bottom-[-60px]">
+                <img src={Robot} alt="Robot" className="w-full" />
+            </div>
+        </section>
+    );
 };
 
 export default ScaleUpAbout;
