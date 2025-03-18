@@ -1,4 +1,4 @@
-import EvalutionCard from "./ui/InfoCard";
+import EvalutionCard from "./UI/EvalutionCard";
 
 const ExpressRules = () => {
   return (

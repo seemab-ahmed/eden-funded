@@ -1,6 +1,5 @@
 import React from "react";
-import EvalutionCard from "./ui/InfoCard";
-
+import EvalutionCard from "./UI/EvalutionCard";
 const EvaluationRules = () => {
   const InfoCardData = [
     {

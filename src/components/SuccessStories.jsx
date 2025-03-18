@@ -1,35 +1,34 @@
 import React from "react";
 import SuccessStorieImg from "../assets/images/succesgraph (3).png";
-import EarthBgImg from "../assets/images/earthAbout.webp";
-import LightBg from "../assets/images/BG.png"
+import globeBg from "../assets/images/earthAbout.webp";
 
 const SuccessStories = () => {
   return (
-    <section className="relative text-white mb-[60px] md:mb[100px] lg:mb-[180px] ">
-      <div className=" flex flex-wrap items-center max-w-[90%] mx-auto  w-full p-10 rounded-[80px] border-2 bg-opacity-10 border-[#B6FFB9] border-opacity-5 bg-[#1E7759] z-50">
-        <img
-          src={SuccessStorieImg}
-          alt="heart iamge"
-          className="w-[758px] h-auto lg:h-[629px] z-20"
-        />
-        <div className="w-full lg:w-[488px] ml-0 lg:ml-[90px] pt-6 lg:mt-0 z-20">
-          <h2 className=" text-white font-medium sm:text-xl md:text-2xl lg:text-[48px] leading-[29px] lg:leading-[62.5px] z-40 lg:text-start text-center">
-            Many success stories.. Are you next?
-          </h2>
-        </div>
-        <div className="absolute inset-[-1px_0_auto] w-[70%] h-[2px] z-10 bg-border-line mx-auto"></div>
-        <img
-          src={LightBg}
-          alt="background-image"
-          className="w-[] h-[] absolute top-0 left-0 z-0"
-        />
-        
+    <section className="relative">
+      {/* Globe Background */}
+      <div className="absolute w-[50%] max-w-[580px] right-0 top-[-50%] z-[-1] 
+        max-xl:top-[-15%] max-lg:top-[-10%]">
+        <img src={globeBg} alt="globe background" className="w-full" />
       </div>
-      <img
-          src={EarthBgImg}
-          alt="Earth-image"
-          className="w-[380px] h-auto absolute top-[-300px] right-0 z-0"
-        />
+
+      <div className="max-w-[1620px] w-[90%] mx-auto pb-[180px] relative z-10">
+        <div
+          className="rounded-[80px] p-10 max-xl:px-[3%] grid grid-cols-1 
+                     md:grid-cols-2 gap-[90px] max-2xl:gap-12 max-xl:gap-9 items-center
+                     bg-sec-radial backdrop-blur-[25px] border-2 border-[#B6D3FF] 
+                     border-opacity-10 text-white max-lg:rounded-[40px]"
+        >
+          <div className="max-md:order-2">
+            <img src={SuccessStorieImg} alt="Success graph" className="w-full" />
+          </div>
+          <div className="max-md:order-1 max-md:text-center">
+            <h3 className="font-medium text-5xl max-lg:text-4xl max-md:text-3xl leading-[1.2] max-w-[488px] max-md:mx-auto">
+              Many success stories.. Are you next?
+            </h3>
+          </div>
+          <div className="absolute bottom-0 inset-x-0 w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+        </div>
+      </div>
     </section>
   );
 };

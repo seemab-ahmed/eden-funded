@@ -7,7 +7,7 @@ import ScaleUpAbout from '../components/ScaleUpAbout'
 import DiscordCommunity from '../components/DiscordCommunity'
 import StatsNumberSpeak from '../components/StatsNumberSpeak'
  
-const About = () => {
+const Payouts = () => {
   return (
     
     <main>
@@ -22,4 +22,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Payouts;
