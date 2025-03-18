@@ -27,9 +27,13 @@ module.exports = {
         "btn-bg":
           "linear-gradient(180deg, rgba(11, 49, 36, 0.20) 0%, rgba(15, 164, 113, 0.20) 100%)",
         "card-bg":
-          "linear-gradient(180deg, rgba(13, 36, 28, 0.15) 0%, rgba(14, 243, 165, 0.15) 100%)",
+          "linear-gradient(180deg, rgba(13, 36, 28, 0.15) 0%, rgba(14, 243, 165, 0.15) 100%), radial-gradient(circle 207px at 8% 0, rgb(14 243 165 / 30%) 0%, transparent 100%)",
         "border-line":
           "radial-gradient(16652.99% 50% at 50% 50%, #0EF3A5 0%, rgba(14, 243, 165, 0.00) 100%)",
+        "border-purple":
+          "linear-gradient(180deg, transparent 0%, #AB27FD 51%, transparent 100%)",
+        "border-purple-sm":
+          "linear-gradient(90deg, transparent 0%, #AB27FD 51%, transparent 100%)",
       },
       boxShadow: {
         custom: "0px 28px 44px 0px rgba(14, 243, 165, 0.30)",

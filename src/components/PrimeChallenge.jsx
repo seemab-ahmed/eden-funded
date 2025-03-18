@@ -40,7 +40,7 @@ const PrimeChallenge = () => {
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-xl:gap-6 relative z-[2]
       max-w-full mt-[83px] pt-[73px] pb-[80px] mx-auto px-[5%] text-center rounded-[80px] max-md:rounded-[40px]
-      bg-sec-radial backdrop-blur-[25px] border-2 border-[#B6D3FF] border-opacity-10 bg-no-repeat"
+      bg-sec-radial backdrop-blur-[25px] border-2 border-[#B6D3FF] border-opacity-10 bg-no-repeat max-2xl:px-[3%]"
         >
           <div className="p-[40px_28px_28px] rounded-[40px] text-white text-center bg-no-repeat bg-card-bg
           border border-[#B6D3FF] border-opacity-10 flex flex-col justify-between">

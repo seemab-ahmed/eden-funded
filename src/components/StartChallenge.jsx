@@ -3,7 +3,7 @@ import ChallengeGrph from "../assets/images/challengeGraph.png";
 
 const StartChallenge = () => {
   return (
-    <section className=" py-[180px]">
+    <section className=" pb-[180px] pt-[120px] max-lg:py-20 max-md:py-12 ">
       <div className="max-w-[1620px] w-[90%] mx-auto">
         <h2 className="text-white text-center text-5xl max-lg:text-4xl max-md:text-3xl font-medium leading-[1.3] mb-[16px]">
           The Steps to Become a Eden-FX Trader

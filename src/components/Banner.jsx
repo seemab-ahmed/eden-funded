@@ -14,10 +14,12 @@ const Banner = ({
   description = "In Simulated Funding, Powered By MT5",
   btnText = "Start",
   isHome = false,
+  ParaWidth= "max-w-[300px]"
 }) => {
   return (
     <section
-      className="flex justify-center items-center pt-28 xl:pt-[176px] pb-10 xl:pb-[100px] max-md:pb-14 bg-cover bg-no-repeat relative lg:h-[100vh] lg:max-h-[870px]"
+      className="flex justify-center items-center pt-28 xl:pt-[176px] pb-10 xl:pb-[100px] 
+      max-md:pb-14 bg-cover bg-no-repeat relative lg:h-[100vh] lg:max-h-[870px] lg:min-h-[740px]"
       style={{
         background: `#091612`,
         backgroundImage: `
@@ -62,7 +64,7 @@ const Banner = ({
             <h1 className="text-5xl xl:text-[74px] font-medium leading-[1.1] text-customWhite mb-3 max-md:text-[36px]">
               {heading}
             </h1>
-            <p className="text-lg xl:text-xl font-normal leading-snug text-customGray mb-8">
+            <p className={`text-lg xl:text-xl font-syne font-normal leading-snug text-customGray mb-8 mx-auto ${ParaWidth}`}>
               {description}
             </p>
             <Link

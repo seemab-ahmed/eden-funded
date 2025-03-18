@@ -2,7 +2,7 @@ import DiscordBgImg from "../assets/images/discordCommunity.png";
 
 export default function DiscordCommunity() {
   return (
-    <section className="">
+    <section className="relative z-[4]">
       <div className=" max-w-[1230px] w-[90%] mx-auto ">
         <div
           className=" text-white rounded-[32px] text-center 

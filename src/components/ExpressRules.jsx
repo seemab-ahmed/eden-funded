@@ -12,7 +12,7 @@ const ExpressRules = () => {
       <div
         className=" px-[3%] py-28 text-center
                    bg-sec-radial backdrop-blur-[25px] border-y-2 border-[#fff] 
-                   border-opacity-10 pt-[60px] pb-[105px]"
+                   border-opacity-10 pt-[60px] pb-[105px] max-md:px-[5%]"
       >
         <div
           className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 max-xl:gap-5 max-lg:gap-6 

@@ -6,7 +6,7 @@ import Planet from "../assets/images/2m-globe.webp";
 const ScaleUp = () => {
   return (
     <section className="relative">
-      <div className="py-[147px] max-md:py-24 bg-[rgba(157,255,222,0.04)] backdrop-blur-[20px] ">
+      <div className="py-[147px] max-lg:py-20 bg-[rgba(157,255,222,0.04)] backdrop-blur-[20px] ">
       <div className="max-w-[1132px] w-[90%] mx-auto">
         <div className="rounded-[10px] relative bg-sec-radial backdrop-blur-[5px] bg-[rgba(157,255,222,0.04)]
         pt-[118px] pb-[87px] text-white max-md:py-12 px-[3%] text-center z-[1]">

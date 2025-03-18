@@ -11,7 +11,13 @@ import ProfileCard from '../components/ProfileCard'
 const ReferEarn = () => {
   return (
     <main>
-      <Banner />
+      <Banner
+        preheader="Trade forex, Build Wealth, Simplified"
+        heading="Our Proud Partner Program!"
+        description="Help Eden-FX  grow and earn up to 20% commission – There’s no limit on how much you can earn profit!"
+        btnText="Start Earning Now"
+        ParaWidth= "max-w-[647px]"
+      />
       <SharePaidRepeat />
       <WhyWeBest />
       <ProfileCard />

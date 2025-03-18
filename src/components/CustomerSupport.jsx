@@ -23,6 +23,8 @@ const CustomerSupport = () => {
           alt="heart iamge"
           className=" "
         />
+        <div className="absolute inset-[-2px_0_auto] w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+
         </div>
       </div>
     </section>

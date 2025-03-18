@@ -17,6 +17,7 @@ const HowItWorks = () => {
         heading="How It Works"
         description="Systems to help you grow, as you scale up with Eden-FX "
         btnText="Get Started"
+
       />
         <HowWeHelp />
         <PrimeChallenge />
