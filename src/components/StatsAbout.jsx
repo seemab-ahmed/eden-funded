@@ -33,16 +33,16 @@ const StatsAbout = () => {
   });
   return (
     <section ref={ref} className=" text-white mb-[60px] md:mb-[100px] lg:mb-[167px] max-md:py-12">
-      <div className="max-w-[90%] mx-auto  w-full px-4 text-center">
+      <div className="max-w-[1108px] w-[90%] mx-auto text-center">
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {statsData.map(
             ({ id, end, prefix, suffix, duration, description }) => (
               <div
                 key={id}
-                className="bg-[rgba(121,255,150,0.04)] border border-[#C3FFCD] border-opacity-5 rounded-[48px] px-6 py-10 md:min-h-[240px] min-h-[180px] flex flex-col items-center justify-center"
+                className="relative bg-[rgba(121,255,150,0.04)] border border-[#C3FFCD] border-opacity-5 rounded-[24px] px-6 py-8 flex flex-col items-center justify-center"
               >
-                <h3 className="text-5xl font-bold max-xl:text-4xl max-md:text-3xl max-sm:text-2xl">
+                <h3 className="text-[32px] font-bold max-xl:text-4xl max-md:text-3xl max-sm:text-2xl">
                   {inView ? (
                     <CountUp
                       end={end}
@@ -55,9 +55,12 @@ const StatsAbout = () => {
                     "0"
                   )}
                 </h3>
-                <p className="mt-2 text-white text-opacity-50 text-lg max-md:text-base max-sm:text-sm">
+                <p className="mt-2 text-white text-[24px] max-md:text-base max-sm:text-sm">
                   {description}
                 </p>
+                <div className="absolute inset-[-2px_0_auto] w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+                <div className="absolute inset-x-0 bottom-[-2px] w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+
               </div>
             )
           )}
