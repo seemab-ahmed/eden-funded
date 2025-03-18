@@ -6,7 +6,7 @@ const SuccessStories = () => {
   return (
     <section className="relative">
       {/* Globe Background */}
-      <div className="absolute w-[50%] max-w-[580px] right-0 top-[-50%] z-[-1] 
+      <div className="absolute w-[50%] max-w-[580px] inset-[-25%_0_auto_auto] right-0 top-[-50%] z-[-1] 
         max-xl:top-[-15%] max-lg:top-[-10%]">
         <img src={globeBg} alt="globe background" className="w-full" />
       </div>
@@ -26,9 +26,14 @@ const SuccessStories = () => {
               Many success stories.. Are you next?
             </h3>
           </div>
-          <div className="absolute bottom-0 inset-x-0 w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+          <div className="absolute top-[-2px] inset-x-0 w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
         </div>
       </div>
+      {/* Globe Background */}
+      {/* <div className="w-[50%] max-w-[830px] inset-[-25%_0_auto_auto] absolute z-[-1]
+      max-xl:inset-[-15%_0_auto_auto] max-lg:inset-[-10%_0_auto_auto]">
+        <img src={globeBg} alt="globe bg" />
+      </div> */}
     </section>
   );
 };

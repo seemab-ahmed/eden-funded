@@ -27,18 +27,18 @@ const ScaleUpAbout = () => {
                     </div>
 
                     {/* Horizontal Line */}
-                    <div className="absolute bottom-0 inset-x-0 w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+                    <div className="absolute top-[-2px] inset-x-0 w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
                 </div>
             </div>
 
             {/* Planet Image - Left Side */}
-            <div className="absolute left-0 bottom-[-90px] w-[40%] max-w-[550px] z-[-1] 
+            <div className="absolute left-[5px] bottom-[-140px] w-[40%] max-w-[680px] z-[-1] 
                 max-xl:bottom-[-80px] max-lg:bottom-[-60px]">
                 <img src={Planet} alt="Planet" className="w-full" />
             </div>
 
             {/* Robot Image - Right Side */}
-            <div className="absolute right-0 top-[-200px] bottom-[-100px] w-[30%] max-w-[780px] z-[-1] 
+            <div className="absolute right-0 top-[-200px] bottom-[-100px] w-[30%] max-w-[580px] z-[-1] 
                 max-xl:bottom-[-80px] max-lg:bottom-[-60px]">
                 <img src={Robot} alt="Robot" className="w-full" />
             </div>

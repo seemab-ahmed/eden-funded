@@ -5,7 +5,7 @@ import FacebookLogo from "../assets/images/instagram.svg";
 import TwitterLogo from "../assets/images/youtube.svg";
 import InstagramLogo from "../assets/images/facebook.svg";
 import ArrowDown from "../assets/images/scroll-down.svg";
-import BannerImg from "../assets/images/banner-bg.webp";
+import BannerVideo from "../assets/images/bannerVideo.mp4"; // Add your video file here
 import starImage from "../assets/images/dots-bg.webp";
 
 const Banner = ({
@@ -16,19 +16,22 @@ const Banner = ({
   isHome = false,
 }) => {
   return (
-    <section
-      className="flex justify-center items-center pt-28 xl:pt-[176px] pb-10 xl:pb-[100px] max-md:pb-14 bg-cover bg-no-repeat relative lg:h-[100vh] lg:max-h-[870px]"
-      style={{
-        background: `#091612`,
-        backgroundImage: `
-          linear-gradient(to bottom, rgba(9, 22, 18, 0) 0%, #091612 80%), 
-          url(${BannerImg})`,
-        backgroundPosition: "center center, center 10%",
-        backgroundSize: "cover, cover",
-        backgroundRepeat: "no-repeat, no-repeat",
-      }}
-    >
-      <div className="container relative h-full z-[3] flex justify-center items-center flex-col">
+    <section className="relative flex justify-center items-center pt-28 xl:pt-[176px] pb-10 xl:pb-[100px] max-md:pb-14 lg:h-[100vh] lg:max-h-[870px] overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-[-1]">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={BannerVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div className="container relative z-[3] flex justify-center items-center flex-col">
         <div className="max-w-[1000px] w-[90%] mx-auto py-10 lg:py-16 xl:py-[90px] px-14 max-md:px-0 max-md:w-full">
           {/* Social Icons */}
           <ul className="absolute top-0 right-0 gap-2.5 hidden lg:grid">
@@ -55,7 +58,7 @@ const Banner = ({
           </ul>
 
           {/* Banner Content */}
-          <div className={`text-center ${isHome? "max-w-[365px]" : ""} mx-auto w-full`}>
+          <div className={`text-center ${isHome ? "max-w-[365px]" : ""} mx-auto w-full`}>
             <span className="stroke-text text-sm md:text-base xl:text-lg font-normal leading-tight tracking-[0.9px] uppercase text-customWhite mb-3">
               {preheader}
             </span>
@@ -65,10 +68,7 @@ const Banner = ({
             <p className="text-lg xl:text-xl font-normal leading-snug text-customGray mb-8">
               {description}
             </p>
-            <Link
-              to="/"
-              className="btn max-w-[228px] mx-auto h-14 bg-customGreen font-bold"
-            >
+            <Link to="/" className="btn max-w-[228px] mx-auto h-14 bg-customGreen font-bold">
               {btnText}
             </Link>
           </div>
@@ -92,10 +92,7 @@ const Banner = ({
           )}
 
           {/* Scroll Down Arrow */}
-          <Link
-            to="/"
-            className="absolute left-0 bottom-0 items-center animate-bounce delay-700 hidden lg:flex"
-          >
+          <Link to="/" className="absolute left-0 bottom-0 items-center animate-bounce delay-700 hidden lg:flex">
             <img src={ArrowDown} alt="Scroll Down" />
           </Link>
         </div>
