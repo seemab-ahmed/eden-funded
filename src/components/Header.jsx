@@ -89,7 +89,7 @@ const Header = () => {
             <ul className="flex flex-col lg:flex-row items-center gap-4 lg:hidden">
               <li>
                 <NavLink
-                  to="/start-challenge"
+                  to="/"
                   className="btn bg-gradient-to-b from-[rgba(11,49,36,0.20)] to-[rgba(15,164,113,0.20)] 
                     border border-[rgba(14,242,165,0.30)] text-white h-14 max-xl:h-11"
                   onClick={() => setMenuOpen(false)}
@@ -113,7 +113,7 @@ const Header = () => {
           <ul className="flex flex-col lg:flex-row items-center gap-4 max-lg:hidden">
             <li>
               <NavLink
-                to="/start-challenge"
+                to="/"
                 className="btn bg-gradient-to-b from-[rgba(11,49,36,0.20)] to-[rgba(15,164,113,0.20)] 
                     border border-[rgba(14,242,165,0.30)] text-white h-14 max-xl:h-11"
                 onClick={() => setMenuOpen(false)}
