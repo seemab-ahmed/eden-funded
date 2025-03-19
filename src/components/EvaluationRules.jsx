@@ -1,5 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 import EvalutionCard from "./UI/EvalutionCard";
+
 const EvaluationRules = () => {
   const InfoCardData = [
     {
@@ -38,29 +40,55 @@ const EvaluationRules = () => {
         "Minimum Trading Days: Traders are required to engage in trading activities for a minimum of 5 days (completing at least one order on each of these trading days). It is not mandatory for these 5 days to be consecutive.",
     },
   ];
+
+  // Container variants to stagger children
+  const containerVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.2 } },
+  };
+  const fadeInUpVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.8, ease: "easeOut" }
+    },
+  };
+  // Card grow animation: each card scales from 0.8 to 1 and fades in
+  const cardVariant = {
+    hidden: { opacity: 0,},
+    visible: { 
+      opacity: 1, 
+      transition: { duration: 0.5, ease: "easeOut" } 
+    },
+  };
+
   return (
-    <section className=" text-white py-16 relative z-[2] max-md:pt-28">
-      <div
-        className="max-w-[1620px] w-[90%] mx-auto"
-      >
-        <h2 className="text-5xl text-center mx-auto font-medium my-4 max-md:text-4xl w-full max-w-[850px] leading-[1.1] mb-[88px] max-md:mb-10">
-        Our Standard/Swing Evaluation Rules
-        </h2>
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 max-xl:gap-5 max-lg:gap-6  px-[3%] py-28 text-center rounded-[80px] 
-                   bg-sec-radial backdrop-blur-[25px] border-2 border-[#fff] 
-                   border-opacity-10 pt-[60px] pb-[105px] max-md:rounded-[30px]">
+    <section className="text-white py-16 relative z-[2] max-md:pt-28">
+      <div className="max-w-[1620px] w-[90%] mx-auto">
+        <motion.h2 className="text-5xl text-center mx-auto font-medium my-4 max-md:text-4xl w-full max-w-[850px] leading-[1.1] mb-[88px] max-md:mb-10"
+        variants={fadeInUpVariant}
+        >
+          Our Standard/Swing Evaluation Rules
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-xl:gap-5 max-lg:gap-6 px-[3%] py-28 text-center rounded-[80px] bg-sec-radial backdrop-blur-[25px] border-2 border-[#fff] border-opacity-10 pt-[60px] pb-[105px] max-md:rounded-[30px]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={containerVariants}
+        >
           {InfoCardData.map((item, index) => (
             <EvalutionCard
               key={index}
-              // icon={DollarSign}
+              animation={cardVariant}
               title={item.title}
               percentage={item.percentage}
               description={item.description}
             />
           ))}
-        <div className="absolute inset-[-2px_0_auto] w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
-
-        </div>
+          <div className="absolute inset-[-2px_0_auto] w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
+        </motion.div>
       </div>
     </section>
   );

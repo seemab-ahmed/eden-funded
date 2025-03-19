@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import WorkImg from "../assets/images/work-astronut.svg";
 import SmileIcon from "../assets/images/smile.svg";
 import ShareIcon from "../assets/images/share.svg";
@@ -23,19 +24,71 @@ const HowItsWork = () => {
       para: "Trade & Get Paid—turn your skills into earnings with every transaction.",
     },
   ];
+
+  // Variants for left content (heading, paragraph, and links)
+  const leftContainerVariants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.3 },
+    },
+  };
+
+  const leftItemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
+
+  // Variants for the work cards container and each card
+  const cardsContainerVariants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.3 },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 30 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
+
   return (
     <section className="py-20 max-md:py-12" id="how-it-works">
       <div className="container">
         <div className="grid grid-cols-2 gap-24 max-md:grid-cols-1 max-md:gap-0">
           <div className="max-md:flex max-md:flex-col">
-            <div className="max-md:order-2">
-              <h2 className="heading-2 mb-4 max-md:text-[32px]">
+            {/* Left Content: Animated text and links */}
+            <motion.div
+              className="max-md:order-2"
+              variants={leftContainerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.h2
+                className="heading-2 mb-4 max-md:text-[32px]"
+                variants={leftItemVariants}
+              >
                 How It Works
-              </h2>
-              <p className="para-1 text-customGray mb-8">
+              </motion.h2>
+              <motion.p
+                className="para-1 text-customGray mb-8"
+                variants={leftItemVariants}
+              >
                 Your Skills with Our Risk. You're not liable for any losses.
-              </p>
-              <ul className="grid grid-cols-2 max-w-[365px] gap-3 mb-16">
+              </motion.p>
+              <motion.ul
+                className="grid grid-cols-2 max-w-[365px] gap-3 mb-16"
+                variants={leftItemVariants}
+              >
                 <li>
                   <Link
                     to="/"
@@ -52,8 +105,10 @@ const HowItsWork = () => {
                     Learn More
                   </Link>
                 </li>
-              </ul>
-            </div>
+              </motion.ul>
+            </motion.div>
+
+            {/* Left Side Image (static) */}
             <img
               src={WorkImg}
               className="max-md:order-1 max-md:mb-6 max-md:max-w-[350px] float-animation"
@@ -61,16 +116,23 @@ const HowItsWork = () => {
               alt="work-img"
             />
           </div>
-          <div className="grid gap-4">
+
+          {/* Right Content: Work Cards Animated */}
+          <motion.div
+            className="grid gap-4"
+            variants={cardsContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {workCards.map((item, index) => (
-              <div
-              key={index}
-                className="p-10 bg-primaryLight border border-darkGray rounded-[32px] max-w-[485px] ml-auto w-full
-              max-md:p-6 max-md:ml-0"
+              <motion.div
+                key={index}
+                className="p-10 bg-primaryLight border border-darkGray rounded-[32px] max-w-[485px] ml-auto w-full max-md:p-6 max-md:ml-0"
+                variants={cardVariants}
               >
                 <figure
-                  className="w-16 h-16 rounded-full bg-customGreen flex items-center justify-center shadow-custom mb-12 
-                max-md:mb-4 max-md:w-12 max-md:h-12"
+                  className="w-16 h-16 rounded-full bg-customGreen flex items-center justify-center shadow-custom mb-12 max-md:mb-4 max-md:w-12 max-md:h-12"
                 >
                   <img src={item.icon} alt="icon" />
                 </figure>
@@ -78,12 +140,11 @@ const HowItsWork = () => {
                   {item.title}
                 </h3>
                 <p className="para-1 text-customGray">{item.para}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
-      
     </section>
   );
 };

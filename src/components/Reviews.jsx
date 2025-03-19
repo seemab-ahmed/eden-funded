@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import StarImg from "../assets/images/star.svg";
 import ArrowLeft from "../assets/images/arrow-left.svg";
 import ArrowRight from "../assets/images/arrow-right.svg";
@@ -62,61 +63,86 @@ const Reviews = () => {
     arrows: false,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, centerPadding: "20px", } },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: "20px",
+        },
+      },
     ],
+  };
+
+  // Fade in and move up variant
+  const fadeInUpVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.8, ease: "easeOut" }
+    },
   };
 
   return (
     <section className="reviews py-20 max-md:py-12" id="reviews">
       <div className="container">
-        {/* Title + Arrows */}
-        <div className="mb-20 flex justify-between items-center">
-          <h2 className="heading-2 text-customWhite max-md:text-[24px]">
+        {/* Title + Arrows with move up animation */}
+        <motion.div
+          className="mb-20 flex justify-between items-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUpVariant}
+        >
+          <motion.h2
+            className="heading-2 text-customWhite max-md:text-[24px]"
+            variants={fadeInUpVariant}
+          >
             What Traders Say <br /> About Eden-funding
-          </h2>
+          </motion.h2>
           <div className="arrows flex gap-4">
             <button
               onClick={handlePrevClick}
               className={`w-[72px] h-[72px] flex items-center justify-center 
-                max-md:w-14 max-md:h-14
-                ${
-                activeButton === "prev"
-                  ? "bg-customGreen"
-                  : "bg-customTransparentWhite"
-              } hover:bg-customGreen transition-all text-white rounded-full`}
+                max-md:w-14 max-md:h-14 ${
+                  activeButton === "prev"
+                    ? "bg-customGreen"
+                    : "bg-customTransparentWhite"
+                } hover:bg-customGreen transition-all text-white rounded-full`}
             >
               <img src={ArrowLeft} alt="arrow-left" />
             </button>
             <button
               onClick={handleNextClick}
               className={`w-[72px] h-[72px] flex items-center justify-center 
-                max-md:w-14 max-md:h-14
-                ${
-                activeButton === "next"
-                  ? "bg-customGreen"
-                  : "bg-customTransparentWhite"
-              } hover:bg-customGreen transition-all text-white rounded-full`}
+                max-md:w-14 max-md:h-14 ${
+                  activeButton === "next"
+                    ? "bg-customGreen"
+                    : "bg-customTransparentWhite"
+                } hover:bg-customGreen transition-all text-white rounded-full`}
             >
               <img src={ArrowRight} alt="arrow-right" />
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Slider */}
-        <Slider ref={sliderRef} {...sliderSettings}>
+        <Slider ref={sliderRef} {...sliderSettings} >
           {reviewsData.map((review, index) => (
             <div key={index} className="px-2">
-              <div className="reviews-card p-8 min-h-[335px] bg-primaryLight border border-darkGray rounded-3xl max-md:p-4
-              flex flex-col justify-between ">
+              <div className="reviews-card p-8 min-h-[335px] bg-primaryLight border border-darkGray rounded-3xl max-md:p-4 flex flex-col justify-between">
                 <div>
-                <div className="flex items-center gap-3 mb-8">
-                  <img src={StarImg} alt="star-img" />
-                  <img src={StarImg} alt="star-img" />
-                  <img src={StarImg} alt="star-img" />
-                  <img src={StarImg} alt="star-img" />
-                  <img src={StarImg} alt="star-img" />
-                </div>
-                <p className="para-1 text-customGray mb-6">"{review.review}"</p>
+                  <div className="flex items-center gap-3 mb-8">
+                    <img src={StarImg} alt="star-img" />
+                    <img src={StarImg} alt="star-img" />
+                    <img src={StarImg} alt="star-img" />
+                    <img src={StarImg} alt="star-img" />
+                    <img src={StarImg} alt="star-img" />
+                  </div>
+                  <p className="para-1 text-customGray mb-6">
+                    "{review.review}"
+                  </p>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-2xl font-medium leading-none text-[#9EA3A1] max-md:text-lg">
