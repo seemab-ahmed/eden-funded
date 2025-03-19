@@ -35,19 +35,19 @@ const withOther = [
 // Framer Motion variants
 const fadeInUpVariant = {
   hidden: { opacity: 0, y: 50 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.8, ease: "easeOut" }
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 
 const textLoadVariant = {
   hidden: { opacity: 0, filter: "blur(4px)" },
-  visible: { 
-    opacity: 1, 
-    filter: "blur(0px)", 
-    transition: { duration: 2, ease: "easeOut" }
+  visible: {
+    opacity: 1,
+    filter: "blur(0px)",
+    transition: { duration: 2, ease: "easeOut" },
   },
 };
 
@@ -65,7 +65,7 @@ const PrimeChallenge = () => {
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUpVariant}
     >
-      <div className="max-w-[1620px] w-[90%] mx-auto">
+      <motion.div className="max-w-[1620px] w-[90%] mx-auto">
         <motion.h2
           className="text-5xl font-medium text-center max-md:text-4xl w-full max-w-[850px] leading-[1.2] mx-auto"
           variants={fadeInUpVariant}
@@ -87,14 +87,17 @@ const PrimeChallenge = () => {
             >
               Unlock Instant Funding
             </motion.h4>
-            <motion.ul className="flex flex-col gap-3" variants={containerVariants}>
+            <motion.ul
+              className="flex flex-col gap-3"
+              variants={containerVariants}
+            >
               {instantFunding.map((item, index) => (
                 <motion.li
                   key={index}
                   className="pt-3 pb-1 text-xl font-normal font-syne relative border-t border-[#0EF3A5] border-opacity-5"
                   variants={textLoadVariant}
                 >
-                  <span >{item}</span>
+                  <motion.span>{item}</motion.span>
                   <div className="absolute inset-[-1px_0_auto] w-[90%] h-[1px] bg-divider mx-auto block"></div>
                 </motion.li>
               ))}
@@ -114,7 +117,10 @@ const PrimeChallenge = () => {
               className="w-32 mx-auto pt-2 pb-3"
               variants={fadeInUpVariant}
             />
-            <motion.ul className="flex flex-col gap-3" variants={containerVariants}>
+            <motion.ul
+              className="flex flex-col gap-3"
+              variants={containerVariants}
+            >
               {withEden.map((item, index) => (
                 <motion.li
                   key={index}
@@ -141,7 +147,10 @@ const PrimeChallenge = () => {
             >
               Other
             </motion.h5>
-            <motion.ul className="flex flex-col gap-3" variants={containerVariants}>
+            <motion.ul
+              className="flex flex-col gap-3"
+              variants={containerVariants}
+            >
               {withOther.map((item, index) => (
                 <motion.li
                   key={index}
@@ -157,7 +166,7 @@ const PrimeChallenge = () => {
           {/* Decorative Line */}
           <div className="absolute inset-[-2px_0_auto] w-[80%] h-[2px] bg-line-bg mx-auto block max-md:w-[60%]"></div>
         </motion.div>
-      </div>
+      </motion.div>
       <div className="w-[50%] max-w-[830px] inset-[auto_auto_-10%_0] absolute z-[0] max-xl:inset-[auto_auto_-10%_0] max-lg:inset-[auto_auto_-6%_0]">
         <img src={Planet} alt="Planet" />
       </div>
