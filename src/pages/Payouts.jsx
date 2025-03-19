@@ -11,8 +11,16 @@ const Payouts = () => {
   return (
     
     <main>
-        <Banner/>
-        <StatsAbout />
+        <Banner
+        preheader="Trade Crypto, Build Wealth, Simplified"
+        heading="Glimpse of Successful Eden-FX
+        Trading Stories"
+        description="Here at Eden-FX we love the transparency. That being said, we're here to showcase our success stories!"
+        btnText="Start Earning Now"
+        ParaWidth= "max-w-[647px]"
+
+      />
+        <StatsAbout /> 
       <SuccessStories />
       <StatsNumberSpeak/>
       <Accomplishment/>

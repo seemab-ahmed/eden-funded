@@ -5,8 +5,8 @@ import YoutubeLogo from "../assets/images/twitter.svg";
 import FacebookLogo from "../assets/images/instagram.svg";
 import TwitterLogo from "../assets/images/youtube.svg";
 import InstagramLogo from "../assets/images/facebook.svg";
-import starImage from "../assets/images/dots-bg.webp";
-import BannerVideo from "../assets/images/hero-section.webm"; 
+// import starImage from "../assets/images/dots-bg.webp";
+import BannerVideo from "../assets/video/banner_video.webm"; 
 
 const MotionLink = motion(Link);
 
@@ -29,11 +29,7 @@ const Banner = ({
 }) => {
   return (
     <section className="relative flex justify-center items-center pt-28 xl:pt-[176px] pb-10 xl:pb-[100px] max-md:pb-14 bg-cover bg-no-repeat lg:h-[100vh] lg:max-h-[870px] lg:min-h-[740px]">
-   <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-  <source src={BannerVideo} type="webm" />
-  {/* <source src="/videos/hero-section.mp4" type="video/mp4" /> */}
-  Your browser does not support the video tag.
-</video>
+      
 
       <div className="container relative h-full z-[3] flex justify-center items-center flex-col">
         <div className="max-w-[1000px] w-[90%] mx-auto py-10 lg:py-16 xl:py-[90px] px-14 max-md:px-0 max-md:w-full">
@@ -112,14 +108,21 @@ const Banner = ({
       </div>
 
       {/* Star Image Overlay */}
-      <div
+      {/* <div
         className="w-full h-full inset-0 absolute z-1"
         style={{
           backgroundImage: `url(${starImage})`,
           backgroundSize: "25%",
           backgroundRepeat: "repeat",
         }}
-      ></div>
+      ></div> */}
+      <div className="absolute inset-0 w-full h-full block">
+      <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+      <source src={BannerVideo} type="video/webm" />
+      <source src={BannerVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    </div>
     </section>
   );
 };
