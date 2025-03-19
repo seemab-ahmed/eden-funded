@@ -5,7 +5,7 @@ import FacebookLogo from "../assets/images/instagram.svg";
 import TwitterLogo from "../assets/images/youtube.svg";
 import InstagramLogo from "../assets/images/facebook.svg";
 import ArrowDown from "../assets/images/scroll-down.svg";
-import BannerImg from "../assets/images/banner-bg.webp";
+import BannerVideo from "../assets/images/bannerVideo.mp4"; // Add your video file here
 import starImage from "../assets/images/dots-bg.webp";
 
 const Banner = ({
@@ -57,7 +57,7 @@ const Banner = ({
           </ul>
 
           {/* Banner Content */}
-          <div className={`text-center ${isHome? "max-w-[365px]" : ""} mx-auto w-full`}>
+          <div className={`text-center ${isHome ? "max-w-[365px]" : ""} mx-auto w-full`}>
             <span className="stroke-text text-sm md:text-base xl:text-lg font-normal leading-tight tracking-[0.9px] uppercase text-customWhite mb-3">
               {preheader}
             </span>
@@ -67,10 +67,7 @@ const Banner = ({
             <p className={`text-lg xl:text-xl font-syne font-normal leading-snug text-customGray mb-8 mx-auto ${ParaWidth}`}>
               {description}
             </p>
-            <Link
-              to="/"
-              className="btn max-w-[228px] mx-auto h-14 bg-customGreen font-bold"
-            >
+            <Link to="/" className="btn max-w-[228px] mx-auto h-14 bg-customGreen font-bold">
               {btnText}
             </Link>
           </div>
@@ -94,10 +91,7 @@ const Banner = ({
           )}
 
           {/* Scroll Down Arrow */}
-          <Link
-            to="/"
-            className="absolute left-0 bottom-0 items-center animate-bounce delay-700 hidden lg:flex"
-          >
+          <Link to="/" className="absolute left-0 bottom-0 items-center animate-bounce delay-700 hidden lg:flex">
             <img src={ArrowDown} alt="Scroll Down" />
           </Link>
         </div>

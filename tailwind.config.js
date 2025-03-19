@@ -13,6 +13,10 @@ module.exports = {
         customTransparentWhite: "rgba(255, 255, 255, 0.05)",
         primaryLight: "rgba(11, 172, 117, 0.05)",
         darkGray: "rgba(49, 60, 56, 0.40)",
+        horizontalLine: "rgba(146, 39, 253, 0.00)", // ✅ Added custom border color
+      },
+      borderColor: {
+        horizontalLine: "rgba(146, 39, 253, 0.00)", // ✅ Added as border color
       },
       fontFamily: {
         syne: ["Syne", "sans-serif"],

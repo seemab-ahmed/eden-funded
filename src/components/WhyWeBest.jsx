@@ -41,7 +41,8 @@ const WhyWeBest = () => {
         </div>
       </div>
     </section>
-  );
+    
+      );
 };
 
 export default WhyWeBest;
