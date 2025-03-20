@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import AstronautImg from "../assets/images/element-img.png";
+import ElementVideo from "../assets/video/elements.webm";
 
 const Elements = () => {
   const containerVariants = {
@@ -23,14 +24,15 @@ const Elements = () => {
   };
 
   return (
-    <section className="overflow-hidden py-20 max-md:py-8" id="about">
+    <section className="overflow-hidden py-20 max-md:py-8 relative" id="about">
       <div className="container">
-        <div className="grid grid-cols-2 gap-20 items-end max-md:grid-cols-1">
-          <div className="max-md:hidden max-md:max-w-[350px]">
+        <div className="grid grid-cols-2 gap-20 items-end max-md:grid-cols-1 max-md:gap-7">
+          <div className="max-md:hidde max-md:max-w-[350px] max-md:order-2 max-md:mx-auto">
             <img src={AstronautImg} alt="astronaut-img" />
           </div>
           {/* Animated Text Content */}
           <motion.div
+          className="relative z-[2] max-md:order-1"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -84,6 +86,13 @@ const Elements = () => {
           </motion.div>
         </div>
       </div>
+      <div className="absolute inset-0 w-full h-full block max-lg:hidden">
+            <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src={ElementVideo} type="video/webm" />
+            <source src={ElementVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          </div>
     </section>
   );
 };

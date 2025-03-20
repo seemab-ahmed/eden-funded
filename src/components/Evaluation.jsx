@@ -25,9 +25,9 @@ const Evaluation = () => {
   };
 
   return (
-    <section className="overflow-hidden pb-20 max-md:pb-8 relative bg-[#091612] lg:-mt-24">
+    <section className="overflow-hidden pb-20 max-md:pb-32 relative bg-[#091612] lg:-mt-24">
       <div className="container relative">
-        <div className="grid grid-cols-2 gap-20 items-end max-md:grid-cols-1">
+        <div className="grid grid-cols-2 gap-20 items-end max-md:grid-cols-1 max-lg:items-center max-md:gap-0">
           {/* Animated Text Content */}
           <motion.div
             initial="hidden"
@@ -69,7 +69,7 @@ const Evaluation = () => {
           </motion.div>
 
           {/* Image Content */}
-          <div className="-mr-[45%] max-md:m-0 max-md:max-w-[350px] relative">
+          <div className="-mr-[45%] max-md:mx-auto max-md:max-w-[350px] relative">
             <img src={EvaluationImg} alt="evaluation-img" />
             <img
               src={AstronautImg}

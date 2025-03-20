@@ -25,14 +25,14 @@ const Banner = ({
   description = "In Simulated Funding, Powered By MT5",
   btnText = "Start",
   isHome = false,
-  ParaWidth = "max-w-[300px]"
+  ParaWidth = "max-w-[100%]"
 }) => {
   return (
     <section className="relative flex justify-center items-center pt-28 xl:pt-[176px] pb-10 xl:pb-[100px] max-md:pb-14 bg-cover bg-no-repeat lg:h-[100vh] lg:max-h-[870px] lg:min-h-[740px]">
       
 
       <div className="container relative h-full z-[3] flex justify-center items-center flex-col">
-        <div className="max-w-[1000px] w-[90%] mx-auto py-10 lg:py-16 xl:py-[90px] px-14 max-md:px-0 max-md:w-full">
+        <div className="max-w-[1000px] w-[90%] mx-auto py-10 lg:py-16 xl:py-[90px] px-14 max-lg:px-0 max-md:w-full">
           {/* Social Icons */}
           <motion.ul
             className="absolute top-0 right-0 gap-2.5 hidden lg:grid"
@@ -104,7 +104,25 @@ const Banner = ({
               {btnText}
             </MotionLink>
           </div>
+          {/* Extra List (only on Home Page) */}
+        {isHome && (
+            <ul className="py-3 px-8 bg-customTransparentWhite flex flex-wrap items-center justify-center max-w-fit mx-auto gap-2.5 rounded-full mt-10 xl:mt-14 max-md:flex-col max-md:items-start max-md:rounded-lg max-lg:px-6 max-md:px-3">
+              <li className="flex gap-2.5 items-center text-base xl:text-[22px] font-normal leading-tight text-white">
+                <span className="w-3 h-3 bg-customGreen rounded-full"></span>
+                Total Payouts
+              </li>
+              <li className="flex gap-2.5 items-center text-base xl:text-[22px] font-normal leading-tight text-white">
+                <span className="w-3 h-3 bg-customGreen rounded-full"></span>
+                Payout Processing Time
+              </li>
+              <li className="flex gap-2.5 items-center text-base xl:text-[22px] font-normal leading-tight text-white">
+                <span className="w-3 h-3 bg-customGreen rounded-full"></span>
+                Challenge To Funded: Same Day
+              </li>
+            </ul>
+          )}
         </div>
+        
       </div>
 
       {/* Star Image Overlay */}

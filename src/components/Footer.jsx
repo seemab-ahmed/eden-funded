@@ -10,7 +10,7 @@ const Footer = () => {
   const navLinks = [
     { name: "About Us", path: "about" },
     { name: "How it Works", path: "how-it-works" },
-    { name: "Challenges", path: "challenges" },
+    // { name: "Challenges", path: "challenges" },
     { name: "FAQ", path: "faq" },
     { name: "Reviews", path: "reviews" },
     { name: "Contact", path: "contact" },
@@ -62,19 +62,20 @@ const Footer = () => {
           </ul>
         </div>
         <div className="pt-6 pb-11 flex items-center justify-between max-md:flex-col max-md:gap-1 max-md:pb-3">
-          <span className="text-sm font-normal leading-none text-[#6F7572]">
+          <Link to="https://eden-funding.com/tc/" target="_blank" className="text-sm font-normal leading-none text-[#6F7572]">
             Terms And Conditions
-          </span>
+          </Link>
           <ul className="flex items-center gap-8 max-md:flex-col max-md:gap-1">
             <li>
               <Link
-                to="/"
+                to="https://eden-funding.com/privacy-policy/" target="_blank"
                 className="text-sm font-normal leading-none text-[#6F7572]"
               >Privacy Policy</Link>
             </li>
             <li>
               <Link
-                to="/"
+                to="https://eden-funding.com/vfa/"
+                target="_blank"
                 className="text-sm font-normal leading-none text-[#6F7572]"
               >Virtual Funded Agreement</Link>
             </li>

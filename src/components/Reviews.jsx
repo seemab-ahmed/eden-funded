@@ -3,11 +3,10 @@ import { motion } from "framer-motion";
 import StarImg from "../assets/images/star.svg";
 import ArrowLeft from "../assets/images/arrow-left.svg";
 import ArrowRight from "../assets/images/arrow-right.svg";
-import AustraliaFlag from "../assets/images/australia-flag.svg";
-import IndiaFlag from "../assets/images/india-flag.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ReactCountryFlag from "react-country-flag";
 
 const Reviews = () => {
   const sliderRef = useRef(null);
@@ -23,30 +22,55 @@ const Reviews = () => {
     setActiveButton("next");
   };
 
+  // Note: The flag for Australia has been updated to use the ISO code "AU"
   const reviewsData = [
     {
       review:
+        "I received my funds in just two days, which was impressive. The customer support team was helpful and responsive throughout the process. I had to complete the KYC process again, but that was okay. I would recommend Eden Funding to others",
+      name: "Hafiz Muhammad",
+      flag: "PK",
+    },
+    {
+      review:
+        "Received my second payout today fast… Received my second payout today fast delivery to my crypto wallet Can't wait to keep getting more payouts let's go!!",
+      name: "Z K",
+      flag: "GB",
+    },
+    {
+      review:
+        "Excellent prop firm. First payout received First payout received same day as requested. After getting Payout approved it arrived within the same few minutes in my wallet. Great trading conditions. Awesome experience and would recommend them",
+      name: "Jade Arendse",
+      flag: "ZA",
+    },
+    {
+      review:
+        "Best funded prop firm Eden funding is the best funded prop firm. I got my withdrawal 1400 USD very quickly. but BTC pair is not available. anyway good prop firm and good customer support",
+      name: "hakeem kdvr",
+      flag: "IN",
+    },
+    {
+      review:
+        "Received the payouts today for both of my accounts , thanks for making me happy. I was stressed a little bit because Eden Funding it's a new propfirm but I'm glad i chose EdenFunding. They may be new, but they’re the best in my opinion !",
+      name: "Omar Ali",
+      flag: "AE",
+    },
+    {
+      review:
+        "Got the payout🔥 I was requested for the payout previous working day and i got it just now.... Thank you eden-funding such a great opportunity to grow together. Thank you so much",
+      name: "Mohammed Niyas",
+      flag: "IN",
+    },
+    {
+      review:
+        "Eden Funding is good platform.I got my second payout within one week. Iam very glad with Eden Funding.",
+      name: "Riyas P A",
+      flag: "AE",
+    },
+    {
+      review:
         "Customer service is 10/10, the moment you put a ticket in you get a reply immediately. Their spreads are amazing. The prices are very affordable. This is hands down the best prop firm I have ever stumbled across!",
       name: "John S.",
-      flag: AustraliaFlag,
-    },
-    {
-      review:
-        "AquaFunded is one of the best funding companies, there are no hidden rules that harm traders, there are no SL and lot rules. Payouts are fast and the support service is very friendly and responds quickly. AquaFunded is the best, I love it",
-      name: "Ravi K.",
-      flag: IndiaFlag,
-    },
-    {
-      review:
-        "Customer service is 10/10, the moment you put a ticket in you get a reply immediately. Their spreads are amazing. The prices are very affordable. This is hands down the best prop firm I have ever stumbled across!",
-      name: "John S.",
-      flag: AustraliaFlag,
-    },
-    {
-      review:
-        "AquaFunded is one of the best funding companies, there are no hidden rules that harm traders, there are no SL and lot rules. Payouts are fast and the support service is very friendly and responds quickly. AquaFunded is the best, I love it",
-      name: "Ravi K.",
-      flag: IndiaFlag,
+      flag: "AU",
     },
   ];
 
@@ -77,10 +101,10 @@ const Reviews = () => {
   // Fade in and move up variant
   const fadeInUpVariant = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.8, ease: "easeOut" }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -128,7 +152,7 @@ const Reviews = () => {
         </motion.div>
 
         {/* Slider */}
-        <Slider ref={sliderRef} {...sliderSettings} >
+        <Slider ref={sliderRef} {...sliderSettings}>
           {reviewsData.map((review, index) => (
             <div key={index} className="px-2">
               <div className="reviews-card p-8 min-h-[335px] bg-primaryLight border border-darkGray rounded-3xl max-md:p-4 flex flex-col justify-between">
@@ -140,15 +164,18 @@ const Reviews = () => {
                     <img src={StarImg} alt="star-img" />
                     <img src={StarImg} alt="star-img" />
                   </div>
-                  <p className="para-1 text-customGray mb-6">
-                    "{review.review}"
-                  </p>
+                  <p className="para-1 text-customGray mb-6">"{review.review}"</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-2xl font-medium leading-none text-[#9EA3A1] max-md:text-lg">
                     – {review.name}
                   </span>
-                  <img src={review.flag} alt="flag" />
+                  <ReactCountryFlag
+                    countryCode={review.flag}
+                    svg
+                    style={{ width: "2em", height: "2em" }}
+                    title={review.flag}
+                  />
                 </div>
               </div>
             </div>

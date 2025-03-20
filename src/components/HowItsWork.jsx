@@ -5,6 +5,7 @@ import WorkImg from "../assets/images/work-astronut.svg";
 import SmileIcon from "../assets/images/smile.svg";
 import ShareIcon from "../assets/images/share.svg";
 import TradeIcon from "../assets/images/trade.svg";
+// import WorkVideo from "../assets/video/work.webm";
 
 const HowItsWork = () => {
   const workCards = [
@@ -145,6 +146,11 @@ const HowItsWork = () => {
           </motion.div>
         </div>
       </div>
+      {/* <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src={WorkVideo} type="video/webm" />
+            <source src={WorkVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video> */}
     </section>
   );
 };

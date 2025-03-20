@@ -46,28 +46,34 @@ const EvaluationRules = () => {
     hidden: {},
     visible: { transition: { staggerChildren: 0.2 } },
   };
+
   const fadeInUpVariant = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.8, ease: "easeOut" }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
-  // Card grow animation: each card scales from 0.8 to 1 and fades in
+
+  // Card grow animation: each card fades in
   const cardVariant = {
-    hidden: { opacity: 0,},
-    visible: { 
-      opacity: 1, 
-      transition: { duration: 0.5, ease: "easeOut" } 
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
   return (
     <section className="text-white py-16 relative z-[2] max-md:pt-28">
       <div className="max-w-[1620px] w-[90%] mx-auto">
-        <motion.h2 className="text-5xl text-center mx-auto font-medium my-4 max-md:text-4xl w-full max-w-[850px] leading-[1.1] mb-[88px] max-md:mb-10"
-        variants={fadeInUpVariant}
+        <motion.h2
+          className="text-5xl text-center mx-auto font-medium my-4 max-md:text-4xl w-full max-w-[850px] leading-[1.1] mb-[88px] max-md:mb-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUpVariant}
         >
           Our Standard/Swing Evaluation Rules
         </motion.h2>

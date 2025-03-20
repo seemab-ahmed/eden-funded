@@ -122,10 +122,10 @@ const ContactNow = () => {
                   </motion.span>
                   <motion.div variants={fadeInUpVariant}>
                     <Link
-                      to="mailto:support@eden-funding.com"
+                      to="mailto:support@eden-fx.com"
                       className="text-base font-normal leading-none text-customWhite"
                     >
-                      support@eden-funding.com
+                      support@eden-fx.com
                     </Link>
                   </motion.div>
                 </div>

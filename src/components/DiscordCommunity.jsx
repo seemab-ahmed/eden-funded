@@ -31,7 +31,8 @@ export default function DiscordCommunity() {
       <div className="max-w-[1230px] w-[90%] mx-auto">
         <motion.div
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
           className="text-white rounded-[32px] text-center 
           border border-[rgba(49,60,56,0.40)] px-10 py-[100px] max-md:px-5 bg-[rgba(11,172,117,0.05)] bg-no-repeat

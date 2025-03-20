@@ -16,7 +16,8 @@ const EvalutionCard = ({ animation, title, percentage, description }) => {
     <motion.div
       variants={animation}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}  // Triggers when 50% of the component is in view, and only once.
       className="flex flex-col gap-6 bg-[rgba(255,255,255,0.10)] text-left text-white p-[48px_30px_64px] rounded-[24px] border relative border-[#0EF3A5] border-opacity-5 max-xl:p-[30px_20px_40px]"
     >
       <div className="bg-green-600 w-8 h-8 rounded-full flex items-start">

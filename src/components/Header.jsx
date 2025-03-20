@@ -7,6 +7,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
+    { name: "Home", path: "/" },
     { name: "How it Works", path: "/how-it-works" },
     { name: "Payouts", path: "/payouts" },
     { name: "Refer & Earn", path: "/refer-earn" },
@@ -53,7 +54,7 @@ const Header = () => {
           <nav
             className={`flex items-center justify-center flex-col py-4 lg:rounded-[80px] 
               lg:border lg:border-white lg:border-opacity-10 max-xl:py-3
-              lg:flex-row gap-5 lg:gap-0 max-w-[507px] max-xl:max-w-[380px] max-lg:max-w-[calc(100%-200px)] 
+              lg:flex-row gap-5 lg:gap-0 max-w-[557px] max-xl:max-w-[420px] max-lg:max-w-[calc(100%-200px)] 
               w-full fixed lg:static top-0 transition-all duration-500 h-full lg:h-auto
               max-lg:bg-primaryLight lg:bg-[rgba(14,243,165,0.10)] backdrop:blur-lg z-10 lg:z-auto
               max-lg:pt-28 max-lg:justify-start ${
@@ -94,7 +95,7 @@ const Header = () => {
                     border border-[rgba(14,242,165,0.30)] text-white h-14 max-xl:h-11"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Start Challenge
+                  Enter the Portal
                 </NavLink>
               </li>
               <li>
@@ -115,17 +116,17 @@ const Header = () => {
               <NavLink
                 to="/"
                 className="btn bg-gradient-to-b from-[rgba(11,49,36,0.20)] to-[rgba(15,164,113,0.20)] 
-                    border border-[rgba(14,242,165,0.30)] text-white h-14 max-xl:h-11"
+                    border border-[rgba(14,242,165,0.30)] text-white h-14 max-xl:h-11 max-xl:px-5"
                 onClick={() => setMenuOpen(false)}
               >
-                Start Challenge
+                Enter the Portal
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/login"
                 className="btn bg-[rgba(52,20,57,0.04)] text-white h-14 border border-white border-opacity-10
-                    max-xl:h-11"
+                    max-xl:h-11 max-xl:px-5"
                 onClick={() => setMenuOpen(false)}
               >
                 Login

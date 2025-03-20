@@ -25,7 +25,7 @@ const StatsSection = () => {
     {
       id: 3,
       end: 3000,
-      prefix: '$',
+      prefix: '',
       suffix: '+',
       duration: 2.5,
       description: 'Active Traders Worldwide',

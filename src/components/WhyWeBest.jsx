@@ -68,7 +68,7 @@ const WhyWeBest = () => {
               variants={fadeInUpVariant}
               className="text-[18px] leading-[1.4] font-normal mt-[20px] max-w-[488px] font-syne text-[rgba(216,218,255,0.60)] max-md:mx-auto"
             >
-              We at UnionWealthsManagement are offering the highest commission
+              We at Eden-FX are offering the highest commission
               percentage for every trader you refer us to, simply share your
               unique link with your audience and get paid when a trader joins on
               any of our trader programs.

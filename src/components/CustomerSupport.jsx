@@ -11,6 +11,7 @@ const CustomerSupport = () => {
       transition: { duration: 0.8, ease: "easeOut" }
     },
   };
+
   const containerVariants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.2 } },
@@ -20,7 +21,8 @@ const CustomerSupport = () => {
     <motion.section
       className="py-[180px] max-lg:py-24 max-md:py-20"
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
       <div className="max-w-[1620px] w-[90%] mx-auto">
@@ -51,7 +53,7 @@ const CustomerSupport = () => {
           </motion.div>
           <motion.img
             src={CustomerGirl}
-            alt="heart iamge"
+            alt="Customer support illustration"
             className=""
             variants={fadeInUpVariant}
           />

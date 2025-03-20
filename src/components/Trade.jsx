@@ -41,13 +41,13 @@ const Trade = () => {
             className="text-lg font-normal leading-none text-customWhite uppercase tracking-[0.9px] mb-4 max-md:text-base"
             variants={textLoadVariant}
           >
-            Trade Smart
+            Trade with Eden
           </motion.span>
           <motion.h2
             className="heading-2 text-5xl text-customWhite mb-4 max-md:text-[32px]"
             variants={textLoadVariant}
           >
-            HFT Series 1-Step Evaluation
+            Industry Leading Programs Models
           </motion.h2>
           <motion.p
             className="text-customGray max-w-[600px] w-full mx-auto mb-8"

@@ -9,9 +9,10 @@ const ScaleUp = () => {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: "easeOut" }
+      transition: { duration: 0.8, delay: 0.2, ease: "easeOut" }
     },
   };
+
   const containerVariants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.2 } },
@@ -21,7 +22,8 @@ const ScaleUp = () => {
     <motion.section
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
       className="relative"
     >
       <div className="py-[147px] max-lg:py-20 bg-[rgba(157,255,222,0.04)] backdrop-blur-[20px]">
