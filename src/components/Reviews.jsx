@@ -82,7 +82,7 @@ const Reviews = () => {
     slidesToScroll: 1,
     centerMode: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     centerPadding: "80px",
     arrows: false,
     responsive: [

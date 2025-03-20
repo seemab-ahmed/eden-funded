@@ -11,7 +11,7 @@ import Trade from "../components/Trade";
 import StatsSection from "../components/StatsSection";
 import TradingPlatforms from "../components/TradingPlatforms";
 import InstantFunding from "../components/InstantFunding";
-
+import TradingViewTickerTape from "../components/TradingViewTickerTape";
 
 const Home = () => {
   return (
@@ -23,6 +23,8 @@ const Home = () => {
         btnText="Start"
         isHome={true}
       />
+      {/* <TradingViewTickerTape /> */}
+      <TradingViewTickerTape />
       <Evaluation />
       <Elements />
       <StatsSection />

@@ -5,7 +5,7 @@ import WorkImg from "../assets/images/work-astronut.svg";
 import SmileIcon from "../assets/images/smile.svg";
 import ShareIcon from "../assets/images/share.svg";
 import TradeIcon from "../assets/images/trade.svg";
-// import WorkVideo from "../assets/video/work.webm";
+import WorkVideo from "../assets/video/work.webm";
 
 const HowItsWork = () => {
   const workCards = [
@@ -62,13 +62,13 @@ const HowItsWork = () => {
   };
 
   return (
-    <section className="py-20 max-md:py-12" id="how-it-works">
+    <section className="py-20 max-md:py-12 relative" id="how-it-works">
       <div className="container">
         <div className="grid grid-cols-2 gap-24 max-md:grid-cols-1 max-md:gap-0">
           <div className="max-md:flex max-md:flex-col">
             {/* Left Content: Animated text and links */}
             <motion.div
-              className="max-md:order-2"
+              className="max-md:order-2 relative z-[3]"
               variants={leftContainerVariants}
               initial="hidden"
               whileInView="visible"
@@ -146,11 +146,13 @@ const HowItsWork = () => {
           </motion.div>
         </div>
       </div>
-      {/* <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+     <div className="absolute inset-0 w-full h-full z-[1] max-xl:hidden">
+     <video autoPlay loop muted playsInline className="w-full h-full object-cover block">
             <source src={WorkVideo} type="video/webm" />
             <source src={WorkVideo} type="video/mp4" />
             Your browser does not support the video tag.
-          </video> */}
+          </video>
+     </div>
     </section>
   );
 };
