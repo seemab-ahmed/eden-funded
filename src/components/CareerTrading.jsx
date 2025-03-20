@@ -26,21 +26,13 @@ const fadeInUp = {
 
 const CareerTrading = ({ mode }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
-  // progress now represents the profit rate in percentage
   const [progress, setProgress] = useState(7.8);
-  // accountSize will be controlled by both plus/minus and the slider
   const [accountSize, setAccountSize] = useState(200000);
   const [animate, setAnimate] = useState(true);
-
-  // A constant factor to tie profit rate to account size so that:
-  // accountSize = profitRate * factor. With initial values: 200000 = 7.8 * factor.
-  const factor = 200000 / 7.8;
-
-  // Define filled and track colors (using the old color scheme)
   const filledColor = "#0EF3A5";
   const trackColor = "rgba(255,255,255,0.10)";
+  const accountSizePercent = accountSize * (progress / 100);
 
-  // Turn off the animation after the initial count up duration
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimate(false);
@@ -48,29 +40,33 @@ const CareerTrading = ({ mode }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  const allowedValues = [10000, 25000, 50000, 100000, 200000];
+
   const handleSliderChange = (event) => {
     const newProgress = parseFloat(event.target.value);
     setProgress(newProgress);
-    setAccountSize(Math.round(newProgress * factor));
   };
 
   const handleIncrement = () => {
     setAccountSize((prev) => {
-      const newSize = prev + 1; // Increase by 1 (as per current logic)
-      setProgress(newSize / factor);
-      return newSize;
+      const currentIndex = allowedValues.indexOf(prev);
+      if (currentIndex < allowedValues.length - 1) {
+        return allowedValues[currentIndex + 1];
+      }
+      return prev;
     });
   };
 
   const handleDecrement = () => {
     setAccountSize((prev) => {
-      const newSize = prev - 1 < 0 ? 0 : prev - 1;
-      setProgress(newSize / factor);
-      return newSize;
+      const currentIndex = allowedValues.indexOf(prev);
+      if (currentIndex > 0) {
+        return allowedValues[currentIndex - 1];
+      }
+      return prev;
     });
   };
 
-  // Compute slider background style for filled portion
   const sliderBackground = {
     background: `linear-gradient(to right, ${filledColor} 0%, ${filledColor} ${
       (progress / 15) * 100
@@ -88,7 +84,6 @@ const CareerTrading = ({ mode }) => {
                    border-opacity-10 pt-[60px] pb-[105px]"
       >
         <div className=" max-w-[1490px] mx-auto ">
-          {/* Wrap the two-column grid in a motion.div to stagger child animations */}
           <motion.div
             className="grid grid-cols-[.9fr_1fr] gap-20 items-center max-xl:gap-14 max-lg:gap-9 max-lg:grid-cols-1"
             variants={containerVariants}
@@ -114,10 +109,10 @@ const CareerTrading = ({ mode }) => {
                   className={`w-full flex justify-between items-center gap-3 p-4 rounded-[16px] border border-[rgba(255,255,255,0.10)] bg-[rgba(0,0,0,0.30)] backdrop-blur-[5px]`}
                 >
                   <div
-                    onClick={handleIncrement}
-                    className={`pb-2 text-[30px] leading-none flex items-center justify-center cursor-pointer rounded-full w-[40px] h-[40px] shadow-iconWhite bg-[rgba(255,255,255,0.04)] backdrop-blur-[2.5px]`}
+                    onClick={handleDecrement}
+                    className={` select-none pb-2 text-[30px] leading-none flex items-center justify-center cursor-pointer rounded-full w-[40px] h-[40px] shadow-iconWhite bg-[rgba(255,255,255,0.04)] backdrop-blur-[2.5px]`}
                   >
-                    +
+                    -
                   </div>
                   <div className="flex flex-col items-center">
                     <span className={`text-sm mb-3 block text-white`}>
@@ -138,10 +133,10 @@ const CareerTrading = ({ mode }) => {
                     </span>
                   </div>
                   <div
-                    onClick={handleDecrement}
-                    className={`pb-2 text-[30px] leading-none flex items-center justify-center cursor-pointer rounded-full w-[40px] h-[40px] shadow-iconWhite bg-[rgba(255,255,255,0.04)] backdrop-blur-[2.5px]`}
+                    onClick={handleIncrement}
+                    className={`select-none pb-2 text-[30px] leading-none flex items-center justify-center cursor-pointer rounded-full w-[40px] h-[40px] shadow-iconWhite bg-[rgba(255,255,255,0.04)] backdrop-blur-[2.5px]`}
                   >
-                    -
+                    +
                   </div>
                 </div>
                 <div
@@ -186,7 +181,15 @@ const CareerTrading = ({ mode }) => {
                   </span>
                   <span className="text-[20px] leading-tight font-semibold">
                     $
-                    <CountUp end={"200000"} duration={4} separator="," />
+                    {animate ? (
+                      <CountUp
+                        end={accountSizePercent}
+                        duration={4}
+                        separator=","
+                      />
+                    ) : (
+                      accountSizePercent.toLocaleString()
+                    )}
                     /Month
                   </span>
                 </div>
