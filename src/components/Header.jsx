@@ -90,7 +90,8 @@ const Header = () => {
             <ul className="flex flex-col lg:flex-row items-center gap-4 lg:hidden">
               <li>
                 <NavLink
-                  to="/"
+                  to="https://dashboard.eden-fx.com/auth/sign-up"
+                  target="_blank"
                   className="btn bg-gradient-to-b from-[rgba(11,49,36,0.20)] to-[rgba(15,164,113,0.20)] 
                     border border-[rgba(14,242,165,0.30)] text-white h-14 max-xl:h-11"
                   onClick={() => setMenuOpen(false)}
@@ -100,7 +101,8 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="/login"
+                  to="https://dashboard.eden-fx.com/auth/sign-in"
+                  target="_blank"
                   className="btn bg-[rgba(52,20,57,0.04)] text-white h-14 border border-white border-opacity-10
                     max-xl:h-11"
                   onClick={() => setMenuOpen(false)}
@@ -114,7 +116,8 @@ const Header = () => {
           <ul className="flex flex-col lg:flex-row items-center gap-4 max-lg:hidden">
             <li>
               <NavLink
-                to="/"
+                to="https://dashboard.eden-fx.com/auth/sign-up"
+                  target="_blank"
                 className="btn bg-gradient-to-b from-[rgba(11,49,36,0.20)] to-[rgba(15,164,113,0.20)] 
                     border border-[rgba(14,242,165,0.30)] text-white h-14 max-xl:h-11 max-xl:px-5"
                 onClick={() => setMenuOpen(false)}
@@ -124,7 +127,8 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/login"
+                to="https://dashboard.eden-fx.com/auth/sign-in"
+                  target="_blank"
                 className="btn bg-[rgba(52,20,57,0.04)] text-white h-14 border border-white border-opacity-10
                     max-xl:h-11 max-xl:px-5"
                 onClick={() => setMenuOpen(false)}

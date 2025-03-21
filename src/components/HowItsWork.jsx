@@ -92,7 +92,8 @@ const HowItsWork = () => {
               >
                 <li>
                   <Link
-                    to="/"
+                    to="https://dashboard.eden-fx.com/auth/sign-in"
+                  target="_blank"
                     className="btn text-customDark bg-customGreen px-10"
                   >
                     Get Started

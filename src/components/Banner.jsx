@@ -95,7 +95,8 @@ const Banner = ({
               {description}
             </motion.p>
             <MotionLink
-              to="/"
+              to="https://dashboard.eden-fx.com/auth/sign-in"
+              target="_blank"
               className="btn max-w-[228px] mx-auto h-14 bg-customGreen font-bold"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}

@@ -43,14 +43,14 @@ const TradingPlatforms = () => {
           The Eden Funding Experience
         </motion.h2>
         {/* Section Subtitle */}
-        <motion.p
+        {/* <motion.p
           className="text-lg text-white text-opacity-50 mb-20 max-w-[754px] mx-auto max-md:text-base max-md:mb-10"
           variants={simpleFadeVariant}
         >
           PropPalace offers top—tier trading platforms with fast transactions,
           advanced tools, and expert support empowering you to trade with
           confidence and precision
-        </motion.p>
+        </motion.p> */}
         {/* Platform 5 Card */}
         <motion.div
           className="rounded-[48px] p-10 min-h-[409px] flex flex-col items-center justify-center max-md:min-h-72 max-md:p-6 max-md:rounded-3xl"
@@ -195,7 +195,8 @@ const TradingPlatforms = () => {
             >
               <motion.li variants={simpleFadeVariant}>
                 <Link
-                  to="/"
+                  to="/payouts"
+                  target="_blank"
                   className="btn font-syne text-customDark bg-customGreen px-10"
                 >
                   More Payouts
@@ -203,7 +204,8 @@ const TradingPlatforms = () => {
               </motion.li>
               <motion.li variants={simpleFadeVariant}>
                 <Link
-                  to="/"
+                  to="https://dashboard.eden-fx.com/auth/sign-up"
+                  target="_blank"
                   className="btn font-syne text-customLightGreen bg-customTransparentWhite px-10"
                 >
                   Join Eden

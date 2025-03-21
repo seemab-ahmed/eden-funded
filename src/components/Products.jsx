@@ -153,7 +153,8 @@ const Products = () => {
                 </motion.span>
                 <motion.div variants={fadeInUpVariant}>
                   <Link
-                    to="/"
+                    to="https://dashboard.eden-fx.com/auth/sign-in"
+                  target="_blank"
                     className="btn text-[#131414] bg-customGreen mb-6"
                   >
                     Start Challenge

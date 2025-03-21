@@ -59,7 +59,8 @@ const Trade = () => {
           </motion.p>
           <motion.div variants={fadeInUpVariant}>
             <Link
-              to="/"
+              to="https://dashboard.eden-fx.com/auth/sign-in"
+              target="_blank"
               className="btn text-customDark max-w-[330px] w-full mx-auto bg-customGreen"
             >
               Get Started

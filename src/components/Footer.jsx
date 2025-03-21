@@ -6,16 +6,17 @@ import YoutubeLogo from "../assets/images/youtube-ft.svg";
 import FacebookLogo from "../assets/images/facebook-ft.svg";
 import Powered from '../assets/images/powered.svg';
 import Propicks from '../assets/images/propicks.svg';
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   const navLinks = [
-    { name: "About Us", path: "about" },
-    { name: "How it Works", path: "how-it-works" },
+    { name: "About Us", path: "/#about" },
+    { name: "How it Works", path: "/#how-it-works" },
     // { name: "Challenges", path: "challenges" },
-    { name: "FAQ", path: "faq" },
-    { name: "Reviews", path: "reviews" },
-    { name: "Contact", path: "contact" },
+    { name: "FAQ", path: "/#faq" },
+    { name: "Reviews", path: "/#reviews" },
+    { name: "Contact", path: "/#contact" },
   ];
 
   return (
@@ -29,13 +30,13 @@ const Footer = () => {
             <ul className="flex items-center gap-10 max-md:flex-col max-md:gap-4">
               {navLinks.map((item, index) => (
                 <li key={index}>
-                  <Link
+                  <HashLink
                     to={item.path}
                     smooth={true} duration={500}
                     className="text-base font-normal leading-none text-white cursor-pointer"
                   >
                     {item.name}
-                  </Link>
+                  </HashLink>
                 </li>
               ))}
             </ul>

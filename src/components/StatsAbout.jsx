@@ -120,7 +120,8 @@ const StatsAbout = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <Link
-            to="/"
+             to="https://dashboard.eden-fx.com/auth/sign-up"
+                  target="_blank"
             className="btn max-w-[230px] mx-auto h-14 font-bold text-black max-sm:text-sm 
                         bg-customGreen mt-10"
           >

@@ -78,7 +78,8 @@ const WhyWeBest = () => {
               variants={fadeInUpVariant}
             >
               <Link
-                to="/"
+                to="https://dashboard.eden-fx.com/auth/sign-in"
+                  target="_blank"
                 className="btn max-w-[170px] max-lg:mx-auto h-14 bg-customGreen font-semibold text-[16px] text-black mt-5"
               >
                 Start Now

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const TradingViewTickerTape = () => {
   const scriptLoaded = useRef(false);
@@ -29,7 +29,6 @@ const TradingViewTickerTape = () => {
       colorTheme: "dark",
       locale: "en"
     });
-
     const container = document.querySelector('.tradingview-widget-container__widget');
     if (container) {
       container.appendChild(script);
@@ -49,9 +48,9 @@ const TradingViewTickerTape = () => {
       <div className="tradingview-widget-container__widget"></div>
       <div className="tradingview-widget-copyright">
         <Link to="https://www.tradingview.com/" rel="noopener nofollow" target="_blank" className=''>
-          <motion.span className=" text-customGreen underline leading-tight"
+          {/* <motion.span className=" text-customGreen underline leading-tight"
            animate={{ color: ['#0ef3a5', '#FFFFFF', '#0ef3a5'] }} 
-           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>Track all markets on TradingView</motion.span>
+           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>Track all markets on TradingView</motion.span> */}
         </Link>
       </div>
     </div>

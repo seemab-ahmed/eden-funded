@@ -60,7 +60,8 @@ const Evaluation = () => {
             </motion.p>
             <motion.div variants={itemVariants}>
               <Link
-                to="/"
+                to="https://dashboard.eden-fx.com/auth/sign-in"
+                  target="_blank"
                 className="btn bg-customTransparentWhite text-customLightGreen max-w-[263px] w-full max-md:max-w-[200px]"
               >
                 Start Evaluation

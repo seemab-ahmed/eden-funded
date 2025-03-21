@@ -194,7 +194,7 @@ const InstantFunding = () => {
                     className="flex flex-col justify-center items-center gap-[10px] h-[32px] px-[16px] py-[4px] rounded-[80px] bg-white/10 text-center text-white text-[16px] font-medium leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3"
                     variants={textLoadVariant}
                   >
-                    4%
+                    4% daily loss
                   </span>
                 </motion.li>
                 <motion.li
@@ -208,7 +208,7 @@ const InstantFunding = () => {
                     <img src={Line} alt="line" className="w-full min-h-[1px]" />
                   </div>
                   <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] px-[16px] py-[4px] rounded-[80px] bg-white/10 text-center text-white text-[16px] font-medium leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
-                    8%
+                    8% max loss
                   </span>
                 </motion.li>
                 <motion.li
@@ -222,7 +222,7 @@ const InstantFunding = () => {
                     <img src={Line} alt="line" className="w-full min-h-[1px]" />
                   </div>
                   <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] px-[16px] py-[4px] rounded-[80px] bg-white/10 text-center text-white text-[16px] font-medium leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
-                    1:100
+                    1:100 leverage
                   </span>
                 </motion.li>
                 <motion.li
@@ -325,7 +325,8 @@ const InstantFunding = () => {
                 >
                   <motion.li variants={fadeInUpVariant}>
                     <Link
-                      to="/"
+                        to="https://dashboard.eden-fx.com/auth/sign-up"
+                  target="_blank"
                       className="btn font-syne text-customLightGreen bg-customTransparentWhite px-10"
                     >
                       Learn more
@@ -333,7 +334,8 @@ const InstantFunding = () => {
                   </motion.li>
                   <motion.li variants={fadeInUpVariant}>
                     <Link
-                      to="/"
+                      to="https://dashboard.eden-fx.com/auth/sign-up"
+                  target="_blank"
                       className="btn font-syne text-customDark bg-customGreen px-10"
                     >
                       Get Funded

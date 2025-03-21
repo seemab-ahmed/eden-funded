@@ -226,7 +226,8 @@ const CareerTrading = ({ mode }) => {
               </p>
               <div className="flex gap-[10px] mt-8 max-lg:justify-center">
                 <Link
-                  to="/"
+                  to="https://dashboard.eden-fx.com/auth/sign-in"
+                  target="_blank"
                   className="btn max-w-[170px] max-lg:mx-auto h-14 bg-customGreen font-semibold text-[16px]
                   "
                 >
