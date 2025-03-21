@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import DiscordBgImg from "../assets/images/discordCommunity.png";
+// import DiscordVideo from "../assets/video/discord.webm";
 
 export default function DiscordCommunity() {
   const fadeInUpVariant = {
@@ -28,7 +29,7 @@ export default function DiscordCommunity() {
 
   return (
     <section className="relative z-[4]">
-      <div className="max-w-[1230px] w-[90%] mx-auto">
+      <div className="max-w-[1230px] w-[90%] mx-auto relative z-[4]">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -85,6 +86,13 @@ export default function DiscordCommunity() {
           </motion.div>
         </motion.div>
       </div>
+      {/* <div className="absolute inset-0 w-full h-full block">
+      <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+      <source src={DiscordVideo} type="video/webm" />
+      <source src={DiscordVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    </div> */}
     </section>
   );
 }

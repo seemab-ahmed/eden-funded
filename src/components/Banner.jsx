@@ -28,7 +28,7 @@ const Banner = ({
   ParaWidth = "max-w-[100%]"
 }) => {
   return (
-    <section className="relative flex justify-center items-center pt-28 xl:pt-[176px] pb-10 xl:pb-[100px] max-md:pb-14 bg-cover bg-no-repeat lg:h-[100vh] lg:max-h-[870px] lg:min-h-[740px]">
+    <section className="relative flex justify-center items-center pt-28 xl:pt-[176px] pb-10 xl:pb-[100px] max-md:pb-14 bg-cover bg-no-repeat lg:h-[calc(100vh - 100px)] lg:max-h-[870px] lg:min-h-[700px]">
       
 
       <div className="container relative h-full z-[3] flex justify-center items-center flex-col">
@@ -106,17 +106,28 @@ const Banner = ({
           </div>
           {/* Extra List (only on Home Page) */}
         {isHome && (
-            <ul className="py-3 px-8 bg-customTransparentWhite flex flex-wrap items-center justify-center max-w-fit mx-auto gap-2.5 rounded-full mt-10 xl:mt-14 max-md:flex-col max-md:items-start max-md:rounded-lg max-lg:px-6 max-md:px-3">
-              <li className="flex gap-2.5 items-center text-base xl:text-[22px] font-normal leading-tight text-white">
-                <span className="w-3 h-3 bg-customGreen rounded-full"></span>
-                Total Payouts
+            <ul className="py-3 px-8 bg-customTransparentWhite flex flex-wrap 
+            items-center justify-center max-w-max  mx-auto gap-2.5 rounded-full 
+            mt-10 xl:mt-14 max-md:flex-col max-md:items-start max-md:rounded-lg 
+            max-lg:px-6 max-md:px-3">
+              <li className="flex items-center text-base xl:text-[18px] font-normal leading-tight text-white">
+                <span className="w-3 h-3 bg-customGreen rounded-full mr-2.5"></span>
+                Total Payouts  <motion.span
+      className="text-customGreen ms-1"
+      animate={{ color: ['#0ef3a5', '#FFFFFF', '#0ef3a5'] }} 
+      transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+    >
+      $183,000
+    </motion.span>
               </li>
-              <li className="flex gap-2.5 items-center text-base xl:text-[22px] font-normal leading-tight text-white">
-                <span className="w-3 h-3 bg-customGreen rounded-full"></span>
-                Payout Processing Time
+              <li className="flex  items-center text-base xl:text-[18px] font-normal leading-tight text-white">
+                <span className="w-3 h-3 bg-customGreen rounded-full mr-2.5"></span>
+                Payout Processing Time <motion.span className="text-customGreen ms-1"
+                 animate={{ color: ['#0ef3a5', '#FFFFFF', '#0ef3a5'] }} 
+                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>11 hours</motion.span>
               </li>
-              <li className="flex gap-2.5 items-center text-base xl:text-[22px] font-normal leading-tight text-white">
-                <span className="w-3 h-3 bg-customGreen rounded-full"></span>
+              <li className="flex items-center text-base xl:text-[18px] font-normal leading-tight text-white">
+                <span className="w-3 h-3 bg-customGreen rounded-full mr-2.5"></span>
                 Challenge To Funded: Same Day
               </li>
             </ul>
@@ -135,7 +146,7 @@ const Banner = ({
         }}
       ></div> */}
       <div className="absolute inset-0 w-full h-full block">
-      <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+      <video autoPlay loop muted playsInline className="w-full h-full object-cover object-center">
       <source src={BannerVideo} type="video/webm" />
       <source src={BannerVideo} type="video/mp4" />
       Your browser does not support the video tag.

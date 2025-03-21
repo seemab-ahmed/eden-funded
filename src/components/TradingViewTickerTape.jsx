@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const TradingViewTickerTape = () => {
   const scriptLoaded = useRef(false);
@@ -11,16 +13,20 @@ const TradingViewTickerTape = () => {
     script.async = true;
     script.innerHTML = JSON.stringify({
       symbols: [
-        { proName: "FOREXCOM:SPXUSD", title: "S&P 500 Index" },
-        { proName: "FOREXCOM:NSXUSD", title: "US 100 Cash CFD" },
-        { proName: "FX_IDC:EURUSD", title: "EUR to USD" },
-        { proName: "BITSTAMP:BTCUSD", title: "Bitcoin" },
-        { proName: "BITSTAMP:ETHUSD", title: "Ethereum" }
+        { description: "XAUUSD", proName: "OANDA:XAUUSD" },
+        { description: "EURUSD", proName: "FX:EURUSD" },
+        { description: "USDCAD", proName: "OANDA:USDCAD" },
+        { description: "GBPUSD", proName: "FX:GBPUSD" },
+        { description: "EURNZD", proName: "OANDA:EURNZD" },
+        { description: "BTC", proName: "BITSTAMP:BTCUSD" },
+        { description: "ETH", proName: "COINBASE:ETHUSD" },
+        { description: "NZDUSD", proName: "OANDA:NZDUSD" },
+        { description: "USDCAD", proName: "OANDA:USDCAD" }
       ],
       showSymbolLogo: true,
-      isTransparent: false,
+      isTransparent: true,
       displayMode: "adaptive",
-      colorTheme: "light",
+      colorTheme: "dark",
       locale: "en"
     });
 
@@ -33,15 +39,20 @@ const TradingViewTickerTape = () => {
     return () => {
       if (container && script.parentNode === container) {
         container.removeChild(script);
-        scriptLoaded.current = false; // Reset script loading state
+        scriptLoaded.current = false; // Reset script loading state on cleanup
       }
     };
   }, []);
 
   return (
-    <div className="tradingview-widget-container relative z-10">
+    <div className="tradingview-widget-container relative z-10 -mt-20 max-lg:-mt-8 max-lg:mb-10">
       <div className="tradingview-widget-container__widget"></div>
       <div className="tradingview-widget-copyright">
+        <Link to="https://www.tradingview.com/" rel="noopener nofollow" target="_blank" className=''>
+          <motion.span className=" text-customGreen underline leading-tight"
+           animate={{ color: ['#0ef3a5', '#FFFFFF', '#0ef3a5'] }} 
+           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>Track all markets on TradingView</motion.span>
+        </Link>
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import TradeBg from "../assets/images/trade-bg.png";
+// import TradeBg from "../assets/images/trade-bg.png";
+import DiscordVideo from "../assets/video/discord.webm";
 
 const fadeInUpVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -24,17 +25,18 @@ const textLoadVariant = {
 const Trade = () => {
   return (
     <motion.section
-      className="py-20 max-md:py-12"
+      className="py-20 max-md:py-12 relative"
       id="trade"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUpVariant}
     >
-      <div className="container">
+      <div className="container relative z-[10]">
         <motion.div
-          className="rounded-[32px] py-[100px] px-10 bg-primaryLight border border-darkGray text-center max-md:px-6 max-md:py-10 bg-cover bg-no-repeat"
-          style={{ backgroundImage: `url(${TradeBg})` }}
+          className="py-[100px] px-10 text-center max-md:px-6 max-md:py-10 bg-cover bg-no-repeat"
+          // className="rounded-[32px] py-[100px] px-10 bg-primaryLight border border-darkGray text-center max-md:px-6 max-md:py-10 bg-cover bg-no-repeat"
+          // style={{ backgroundImage: `url(${TradeBg})` }}
           variants={fadeInUpVariant}
         >
           <motion.span
@@ -65,6 +67,13 @@ const Trade = () => {
           </motion.div>
         </motion.div>
       </div>
+      <div className="absolute inset-0 w-full h-full block z-0">
+      <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+      <source src={DiscordVideo} type="video/webm" />
+      <source src={DiscordVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    </div>
     </motion.section>
   );
 };
