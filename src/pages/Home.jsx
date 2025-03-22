@@ -12,6 +12,8 @@ import StatsSection from "../components/StatsSection";
 import TradingPlatforms from "../components/TradingPlatforms";
 import InstantFunding from "../components/InstantFunding";
 import TradingViewTickerTape from "../components/TradingViewTickerTape";
+import CareerTrading from "../components/CareerTrading";
+import OffCode from "../components/OffCode";
 
 const Home = () => {
   return (
@@ -27,6 +29,7 @@ const Home = () => {
       <TradingViewTickerTape />
       <Evaluation />
       <Elements />
+      <CareerTrading />
       <StatsSection />
       <HowItsWork />
       <TradingPlatforms />
@@ -36,6 +39,7 @@ const Home = () => {
       <Faqs />
       <ContactNow />
       <Trade />
+      <OffCode />
 
 
     </main>

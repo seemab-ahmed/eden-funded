@@ -170,11 +170,11 @@ const TradingPlatforms = () => {
                 </motion.span>
                 <motion.div
                   className="rounded-[80px] bg-white/10 backdrop-blur-[27px] px-2.5 py-2  
-                  flex gap-2 text-sm text-white w-full"
+                  flex gap-2 text-sm justify-start text-left text-white w-full"
                   variants={textLoadVariant}
                 >
                   <img src={check} alt="check" />
-                  <span>Industury Leading Commission splits</span>
+                  <span className="">Industury Leading Commission splits</span>
                 </motion.div>
                 <motion.div
                   className="rounded-[80px] bg-white/10 backdrop-blur-[27px] px-2.5 py-2  

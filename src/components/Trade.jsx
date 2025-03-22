@@ -34,25 +34,28 @@ const Trade = () => {
     >
       <div className="container relative z-[10]">
         <motion.div
-          className="py-[100px] px-10 text-center max-md:px-6 max-md:py-10 bg-cover bg-no-repeat"
+          className="py-[100px] px-10 text-center max-xl:py-10 max-lg:pt-[2%] max-md:px-6 max-md:pb-0 max-[420px]:pt-5  bg-cover bg-no-repeat max-sm:-mt-5"
           // className="rounded-[32px] py-[100px] px-10 bg-primaryLight border border-darkGray text-center max-md:px-6 max-md:py-10 bg-cover bg-no-repeat"
           // style={{ backgroundImage: `url(${TradeBg})` }}
           variants={fadeInUpVariant}
         >
           <motion.span
-            className="text-lg font-normal leading-none text-customWhite uppercase tracking-[0.9px] mb-4 max-md:text-base"
+            className="text-lg font-normal leading-none text-customWhite 
+            max-lg:text-base max-lg:mb-2 uppercase tracking-[0.9px] mb-4 max-md:text-sm max-sm:mb-1"
             variants={textLoadVariant}
           >
             Trade with Eden
           </motion.span>
           <motion.h2
-            className="heading-2 text-5xl text-customWhite mb-4 max-md:text-[32px]"
+            className="heading-2 text-5xl text-customWhite max-lg:text-4xl 
+            mb-4 max-md:text-[30px] max-md:mb-2 max-sm:text-[26px] max-sm:leading-tight"
             variants={textLoadVariant}
           >
             Industry Leading Programs Models
           </motion.h2>
           <motion.p
-            className="text-customGray max-w-[600px] w-full mx-auto mb-8"
+            className="text-customGray max-w-[600px] w-full mx-auto mb-8 max-lg:mb-4
+            max-sm:text-sm  max-[420px]:mt-7"
             variants={fadeInUpVariant}
           >
             Unlock up to 500K in maximum simulated funding and elevate your trading potential with expert strategies.
@@ -61,7 +64,7 @@ const Trade = () => {
             <Link
               to="https://dashboard.eden-fx.com/auth/sign-in"
               target="_blank"
-              className="btn text-customDark max-w-[330px] w-full mx-auto bg-customGreen"
+              className="btn text-customDark max-w-[330px] w-full mx-auto bg-customGreen max-lg:h-[50px] max-md:h-[44px]"
             >
               Get Started
             </Link>
@@ -69,7 +72,7 @@ const Trade = () => {
         </motion.div>
       </div>
       <div className="absolute inset-0 w-full h-full block z-0">
-      <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+      <video autoPlay loop muted playsInline className="w-[100vw] h-auto object-cover">
       <source src={DiscordVideo} type="video/webm" />
       <source src={DiscordVideo} type="video/mp4" />
       Your browser does not support the video tag.
