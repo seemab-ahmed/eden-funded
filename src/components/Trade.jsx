@@ -25,7 +25,7 @@ const textLoadVariant = {
 const Trade = () => {
   return (
     <motion.section
-      className="py-20 max-md:py-12 relative"
+      className="py-20 max-md:py-12 relative overflow-hidden"
       id="trade"
       initial="hidden"
       whileInView="visible"
