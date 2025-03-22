@@ -54,7 +54,7 @@ const Trade = () => {
             Industry Leading Programs Models
           </motion.h2>
           <motion.p
-            className="text-customGray max-w-[600px] w-full mx-auto mb-8 max-lg:mb-4
+            className="text-customGray max-w-[600px] text-lg max-md:text-base w-full mx-auto mb-8 max-lg:mb-4
             max-sm:text-sm  max-[420px]:mt-7"
             variants={fadeInUpVariant}
           >
@@ -72,7 +72,7 @@ const Trade = () => {
         </motion.div>
       </div>
       <div className="absolute inset-0 w-full h-full block z-0">
-      <video autoPlay loop muted playsInline className="w-[100vw] h-auto object-cover">
+      <video autoPlay loop muted playsInline className="w-[100vw] h-auto object-cover mx-auto max-w-[1680px] xl:max-h-[600px]">
       <source src={DiscordVideo} type="video/webm" />
       <source src={DiscordVideo} type="video/mp4" />
       Your browser does not support the video tag.

@@ -36,7 +36,7 @@ export default function DiscordCommunity() {
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
           className="text-white rounded-[32px] text-center 
-           px-10 pt-[180px] max-[1400px]:pt-[140px] max-lg:pt-[90px] pb-[100px] max-md:pt-[54px] max-sm:pt-10 max-[440px]:pt-[36px] max-md:px-5 bg-no-repeat
+           px-10 pt-[130px] max-lg:pt-[90px] pb-[100px] max-md:pt-[54px] max-sm:pt-10 max-[440px]:pt-[36px] max-md:px-5 bg-no-repeat
           max-lg:pb-20 max-md:pb-12 absolute left-0 right-0 top-[10%] mx-auto "
           // className="text-white rounded-[32px] text-center 
           // border border-[rgba(49,60,56,0.40)] px-10 py-[100px] max-md:px-5 bg-[rgba(11,172,117,0.05)] bg-no-repeat
@@ -56,15 +56,15 @@ export default function DiscordCommunity() {
           </motion.span>
           <motion.h2
             variants={fadeInUpVariant}
-            className="text-[56px] font-semibold leading-[1.2] mb-8 max-lg:mb-3 max-md:mb-3 text-[#FDFEFE]
-            max-xl:text-5xl max-lg:text-[30px] max-md:text-[28px] max-sm:text-[26px] max-sm:mb-0"
+            className="text-[56px] font-semibold leading-[1.2] mb-8 max-[1400px]:mb-5 max-lg:mb-3 max-md:mb-3 text-[#FDFEFE]
+            max-[1400px]:text-5xl max-lg:text-[30px] max-md:text-[28px] max-sm:text-[26px] max-sm:mb-0"
           >
             Join Our Discord Community
           </motion.h2>
           <motion.h3
             variants={fadeInUpVariant}
             className="text-[40px] font-medium text-white leading-[1.3]
-            max-xl:text-4xl max-lg:text-[25px] max-md:text-[20px]"
+            max-[1400px]:text-3xl max-lg:text-[25px] max-md:text-[20px]"
           >
             Dive Into Eden-FX
           </motion.h3>
@@ -94,7 +94,7 @@ export default function DiscordCommunity() {
         </motion.div>
       </div>
       <div className="relative  w-full h-full block z-0">
-            <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <video autoPlay loop muted playsInline className="w-full h-full object-cover mx-auto max-w-[1680px] xl:max-h-[600px]">
             <source src={DiscordVideo} type="video/webm" />
             <source src={DiscordVideo} type="video/mp4" />
             Your browser does not support the video tag.
