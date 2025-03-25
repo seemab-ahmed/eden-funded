@@ -285,7 +285,7 @@ const InstantFunding = () => {
                     variants={fadeInUpVariant}
                   >
                     Bypass the challenge and receive instant funding. Begin your
-                    journey as an Aquo Trader today, manage risks carefully, and
+                    journey as an Eden-Fx today, manage risks carefully, and
                     enjoy up to a 95% profit share.
                   </motion.p>
                   {activeTab === "Instant" && (
