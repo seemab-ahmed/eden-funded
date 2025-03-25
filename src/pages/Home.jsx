@@ -14,6 +14,7 @@ import InstantFunding from "../components/InstantFunding";
 import TradingViewTickerTape from "../components/TradingViewTickerTape";
 import CareerTrading from "../components/CareerTrading";
 import OffCode from "../components/OffCode";
+import TrustBoxWidget from "../components/TrustBoxWidget";
 
 const Home = () => {
   return (
@@ -33,8 +34,10 @@ const Home = () => {
       <StatsSection />
       <HowItsWork />
       <TradingPlatforms />
+      <TrustBoxWidget />
       <Products />
       <InstantFunding/>
+
       <Reviews />
       <Faqs />
       <ContactNow />

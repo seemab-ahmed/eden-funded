@@ -22,7 +22,7 @@ const textLoadVariant = {
   visible: {
     opacity: 1,
     filter: "blur(0px)",
-    transition: { duration: 1.5, ease: "easeOut" },
+    transition: { duration: 0.9, ease: "easeOut" },
   },
 };
 
