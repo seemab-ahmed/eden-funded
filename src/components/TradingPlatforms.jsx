@@ -174,7 +174,7 @@ const TradingPlatforms = () => {
                   variants={textLoadVariant}
                 >
                   <img src={check} alt="check" />
-                  <span className="">Industury Leading Commission splits</span>
+                  <span className="">Industry Leading Commission splits</span>
                 </motion.div>
                 <motion.div
                   className="rounded-[80px] bg-white/10 backdrop-blur-[27px] px-2.5 py-2  

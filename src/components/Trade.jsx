@@ -51,7 +51,7 @@ const Trade = () => {
             mb-4 max-md:text-[30px] max-md:mb-2 max-sm:text-[26px] max-sm:leading-tight"
             variants={textLoadVariant}
           >
-            Industry Leading Programs Models
+            Industry Leading Program Models
           </motion.h2>
           <motion.p
             className="text-customGray max-w-[600px] text-lg max-md:text-base w-full mx-auto mb-8 max-lg:mb-4
