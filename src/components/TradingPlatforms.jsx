@@ -54,6 +54,7 @@ const TradingPlatforms = () => {
         {/* Platform 5 Card */}
         <motion.div
           className="rounded-[48px] p-10 min-h-[409px] flex flex-col items-center justify-center max-md:min-h-72 max-md:p-6 max-md:rounded-3xl"
+          id="payouts"
           style={{
             background: ` linear-gradient(180deg, rgba(24, 26, 56, 0.00) 0%, #181A38 100%), 
             linear-gradient(0deg, rgba(32, 158, 51, 0.32) 0%, rgba(32, 158, 51, 0.32) 100%), 

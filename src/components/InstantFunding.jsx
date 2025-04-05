@@ -4,11 +4,11 @@ import Line from "../assets/images/mid-line.svg";
 import InstantImg from "../assets/images/transform-Img.webp";
 import { Link } from "react-router-dom";
 
-const Tabs = [" HFT Series", "Instant"];
+const Tabs = ["1-STEP HFT", "EDEN VIP"];
 const Steps = ["Instant", "1-Step"];
 const tabPriceData = {
-  " HFT Series": ["$25k", "$50k", "$100k", "$200k", "$300k"],
-  Instant: ["$100k"],
+  "1-STEP HFT": ["$25k", "$50k", "$100k", "$200k", "$300k"],
+  "EDEN VIP": ["$100k"],
 };
 
 // Smooth fade in & move up variant
@@ -37,9 +37,9 @@ const containerVariants = {
 };
 
 const InstantFunding = () => {
-  const [activeTab, setActiveTab] = useState(" HFT Series");
+  const [activeTab, setActiveTab] = useState("1-STEP HFT");
   const [Step, setStep] = useState("Instant");
-  const [Price, setPrice] = useState(tabPriceData[" HFT Series"][0]);
+  const [Price, setPrice] = useState(tabPriceData["1-STEP HFT"][0]);
 
   return (
     <motion.section
@@ -52,7 +52,7 @@ const InstantFunding = () => {
       <div className="container max-w-[1620px]">
         <motion.div className="text-center" variants={fadeInUpVariant}>
           <motion.h2 className="heading-2 text-5xl text-customWhite mb-4 max-md:text-[32px]">
-            {activeTab === "Instant"
+            {activeTab === "EDEN VIP"
               ? "Unlock Sim-Funded Accounts"
               : "Unlock Instant Funding"}
           </motion.h2>
@@ -163,9 +163,9 @@ const InstantFunding = () => {
                   className="text-white text-[40px] font-medium leading-[130%] max-xl:text-[36px] max-md:text-3xl max-sm:text-2xl"
                   variants={textLoadVariant}
                 >
-                  {activeTab === "Instant"
+                  {activeTab === "EDEN VIP"
                     ? "Unlock Instant Funding"
-                    : "1-Step HFT Series Challenge"}
+                    : "1-Step HFT Challenge"}
                 </motion.h3>
                 <motion.p
                   className="text-[rgba(216,255,218,0.60)] text-[18px] font-normal leading-[160%] max-w-[490px] mt-2 max-md:text-base"
@@ -239,7 +239,7 @@ const InstantFunding = () => {
                     <img src={Line} alt="line" className="w-full min-h-[1px]" />
                   </div>
                   <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] px-[16px] py-[4px] rounded-[80px] bg-white/10 text-center text-white text-[16px] font-medium leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
-                    Bi-Weekly
+                    Every 5 days
                   </span>
                 </motion.li>
                 <motion.li
@@ -253,7 +253,7 @@ const InstantFunding = () => {
                     <img src={Line} alt="line" className="w-full min-h-[1px]" />
                   </div>
                   <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] px-[16px] py-[4px] rounded-[80px] bg-white/10 text-center text-white text-[16px] font-medium leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
-                    {activeTab === "Instant" ? "Up tp 95%" : "50 / 70 / 80"}
+                    {activeTab === "EDEN VIP" ? "Up t0 80%" : "75%"}
                   </span>
                 </motion.li>
               </motion.ul>
@@ -265,11 +265,6 @@ const InstantFunding = () => {
             >
               <motion.div
                 className="w-full h-[247px] bg-cover max-sm:h-[200px]"
-                // style={{
-                //   background: `linear-gradient(180deg, rgba(24, 56, 25, 0.00) 0%, rgba(71, 193, 81, 0.30) 100%), 
-                //               linear-gradient(0deg, rgba(51, 158, 32, 0.20) 0%, rgba(51, 158, 32, 0.20) 100%), 
-                //               url(${InstantImg}) 0px -257.014px / 100% 230.162% no-repeat`,
-                // }}
                 style={{
                   background: `                        
                               url(${InstantImg}) center / cover no-repeat`,
@@ -290,35 +285,25 @@ const InstantFunding = () => {
                   >
                     Bypass the challenge and receive instant funding. Begin your
                     journey as an Eden-Fx today, manage risks carefully, and
-                    enjoy up to a 95% profit share.
+                    enjoy up to 80% for 1-step
                   </motion.p>
-                  {activeTab === "Instant" && (
+                  {activeTab === "EDEN VIP" && (
                     <motion.div
                       className="flex flex-col items-end gap-[4px] p-[12px_24px] rounded-[16px] border border-white border-opacity-5 bg-[rgba(11,172,117,0.02)] mt-[-39px] max-sm:mt-0"
-                      // variants={fadeInUpVariant}
                     >
                       <motion.div
                         className="flex items-center gap-2 justify-end max-sm:justify-center"
-                        // variants={fadeInUpVariant}
                       >
                         <motion.span
                           className="text-white text-right text-[24px] font-bold leading-[130%]"
-                          // variants={textLoadVariant}
                         >
-                          $42
-                        </motion.span>
-                        <motion.span
-                          className="text-[rgba(216,255,222,0.40)] text-right text-[16px] font-medium leading-[130%] line-through"
-                          // variants={fadeInUpVariant}
-                        >
-                          $60
+                          $697
                         </motion.span>
                       </motion.div>
                       <motion.span
                         className="text-[rgba(216,255,222,0.40)] text-right text-[16px] font-medium leading-[130%]"
-                        // variants={fadeInUpVariant}
                       >
-                        For $2.5k Account
+                        For $100k Account
                       </motion.span>
                     </motion.div>
                   )}

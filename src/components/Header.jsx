@@ -8,9 +8,9 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "How it Works", path: "/how-it-works" },
-    { name: "Payouts", path: "/payouts" },
-    { name: "Refer & Earn", path: "/refer-earn" },
+    { name: "How it Works", path: "/#how-it-works" },
+    { name: "Payouts", path: "/#payouts" },
+    { name: "Refer & Earn", path: "/#refer-earn" },
     // For FAQ, use home page with a hash to the FAQ section.
     { name: "FAQ", path: "/#faq" },
   ];
@@ -65,7 +65,7 @@ const Header = () => {
             <ul className="flex flex-col lg:flex-row items-center gap-5 xl:gap-10">
               {navLinks.map((item, index) => (
                 <li key={index}>
-                  {item.name === "FAQ" ? (
+                  {item.name !== "Home" ? (
                     <HashLink
                       smooth
                       to={item.path}

@@ -40,7 +40,7 @@ const CareerTrading = ({ mode }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  const allowedValues = [10000, 25000, 50000, 100000, 200000];
+  const allowedValues = [10000, 25000, 50000, 100000, 200000 , 300000];
 
   const handleSliderChange = (event) => {
     const newProgress = parseFloat(event.target.value);
@@ -210,7 +210,7 @@ const CareerTrading = ({ mode }) => {
                   WebkitTextStrokeColor: "#0EF3A5",
                 }}
               >
-                A Full Time Career
+                A Full Eden Funding Commission Model
               </span>
               <h2
                 className={`text-[50px] leading-tight font-semibold tracking-[-0.5px] max-lg:text-4xl text-white`}
@@ -221,8 +221,7 @@ const CareerTrading = ({ mode }) => {
                 className={`text-sm leading-[1.71] mx-auto mt-[10px] text-white font-syne
               `}
               >
-                On average our top traders earn 7.8% you take home 90% of those
-                profits
+                On average "Our top traders can scale up to an 80% profit split. Test out how it looks here."
               </p>
               <div className="flex gap-[10px] mt-8 max-lg:justify-center">
                 <Link
@@ -248,7 +247,7 @@ const CareerTrading = ({ mode }) => {
         }}
       ></div>
       {/* Slider Thumb Styles */}
-      <style jsx>{`
+      <style jsx={true} >{`
         input[type="range"]::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
