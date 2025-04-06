@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Line from "../assets/images/mid-line.svg";
 import InstantImg from "../assets/images/transform-Img.webp";
+import bgTab1 from "../assets/images/bg-tab-1.svg";
+import bgTab2 from "../assets/images/bg-tab-2.svg";
 import { Link } from "react-router-dom";
 
 const Tabs = ["1-STEP HFT", "EDEN VIP"];
 const Steps = ["Instant", "1-Step"];
 const tabPriceData = {
-  "1-STEP HFT": ["$25k", "$50k", "$100k", "$200k", "$300k"],
+  "1-STEP HFT": ["$10k", "$25k", "$50k", "$100k", "$200k", "$300k"],
   "EDEN VIP": ["$100k"],
 };
 
@@ -64,19 +66,20 @@ const InstantFunding = () => {
       </div>
 
       {/* Tabs */}
-      <motion.div className=" max-w-[1260px] w-[95%] mx-auto" variants={fadeInUpVariant}>
-        <div className="flex justify-between">
+      <motion.div className=" max-w-[1260px] w-[95%] mx-auto relative" variants={fadeInUpVariant}
+      >
+        <div className="flex justify-between relative z-10">
           <motion.div
-            className="flex flex-wrap max-sm:justify-center max-md:gap-y-4" 
+            className="flex flex-wrap max-sm:justify-center max-md:gap-y-4 " 
             variants={fadeInUpVariant}
           >
             {Steps.map((tab) => (
               <motion.button
                 key={tab}
-                className={`relative px-8 py-[10px] h-[76px] flex items-center justify-center transition-all duration-500 ease-in-out text-base text-center leading-none font-medium max-xl:px-4 max-xl:h-11 max-md:px-4 max-md:h-10 border max-md:text-sm ${
+                className={`relative px-24 py-[10px] h-[76px] flex items-center justify-center transition-all duration-500 ease-in-out text-base text-center leading-none font-medium max-xl:px-20 max-md:px-4 max-md:h-10 border max-md:text-sm ${
                   Step === tab
-                    ? "border-white border-opacity-5 text-white bg-[rgba(121,255,139,0.04)] rounded-[30px_30px_0_0]"
-                    : "text-[#D8FFDA99] border-transparent bg-transparent rounded-[0px_0px_0_30px]"
+                    ? "border-transparent border-opacity-5 text-white rounded-[40px_40px_0_0] border-b-transparent"
+                    : "text-[#fff] border-transparent bg-transparent rounded-[0px_0px_0_40px]"
                 }`}
                 onClick={() => setStep(tab)}
               >
@@ -114,11 +117,11 @@ const InstantFunding = () => {
         </div>
 
         <motion.div
-          className="rounded-[0_30px_30px_30px] border-2 border-[#B6FFB9] border-opacity-5 bg-[rgba(11,172,117,0.04)] backdrop-blur-[25px] p-10 max-md:px-5"
+          className="relative z-10 rounded-[0_30px_30px_30px]  border-opacity-5  p-10 pt-4 max-md:px-5"
           variants={fadeInUpVariant}
         >
           <motion.div
-            className="rounded-[160px] border border-[#D9D9D9] border-opacity-50 bg-[rgba(11,172,117,0.02)] p-5 
+            className="rounded-[160px] border border-[#D9D9D9] border-opacity-50 bg-[rgba(11,172,117,0.02)] p-1 
             flex justify-between items-center flex-wrap max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:gap-6 max-lg:rounded-3xl"
             variants={containerVariants}
           >
@@ -129,20 +132,21 @@ const InstantFunding = () => {
               {tabPriceData[activeTab].map((pricetab) => (
                 <motion.button
                   key={pricetab}
-                  className={`relative px-8 py-[10px] h-[53px] rounded-[58px] flex items-center justify-center transition-all duration-500 ease-in-out text-base text-center leading-none font-medium max-xl:px-4 max-xl:h-11 max-md:px-4 max-md:h-10 border max-md:text-sm ${
+                  className={`relative px-8 py-[10px] h-[46px] rounded-[58px] flex items-center justify-center transition-all duration-500 ease-in-out 
+                    text-base text-center leading-none font-medium max-xl:px-4 max-xl:h-11 max-md:px-4 max-md:h-10 max-md:text-sm ${
                     Price === pricetab
-                      ? "border-white border-opacity-5 text-white bg-[rgba(121,255,139,0.04)]"
-                      : "text-[#D8FFDA99] border-transparent bg-transparent"
+                      ? " text-[#0F0F0F] bg-[#0EF3A5]"
+                      : "text-[#fff] border-transparent bg-transparent"
                   }`}
                   onClick={() => setPrice(pricetab)}
                 >
                   {pricetab}
                   {pricetab === "$100k" && (
                     <motion.span
-                      className="bg-[#0EF3A5] text-[#0F0F0F] rounded-[80px] h-[21px] text-[11px] leading-none px-2 flex items-center absolute left-0 right-0 mx-auto top-[-11px] max-w-max max-xl:text-[10px] max-xl:h-5 max-xl:-top-3"
+                      className="bg-[#0EF3A5] text-[#0F0F0F] rounded-[80px] h-[21px] text-[11px] leading-none px-2 flex items-center absolute left-0 right-0 mx-auto top-[-14px] max-w-max max-xl:text-[10px] max-xl:h-5 max-xl:-top-3"
                       variants={textLoadVariant}
                     >
-                      New
+                      Most Popular
                     </motion.span>
                   )}
                 </motion.button>
@@ -335,6 +339,40 @@ const InstantFunding = () => {
             </motion.div>
           </motion.div>
         </motion.div>
+        {/* Background 1 */}
+  <div 
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      backgroundImage: `url(${bgTab1})`,
+      backgroundPosition: "top left",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      opacity: Step === "Instant" ? 1 : 0,
+      transition: "opacity 0.5s ease-in-out",
+      zIndex: 0,
+    }}
+  />
+  {/* Background 2 */}
+  <div
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      backgroundImage: `url(${bgTab2})`,
+      backgroundPosition: "top left",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "contain",
+      opacity: Step === "Instant" ? 0 : 1,
+      transition: "opacity 0.5s ease-in-out",
+      zIndex: 0,
+    }}
+  />
       </motion.div>
     </motion.section>
   );
