@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import PlatformImg from "../assets/images/platform-5bg.webp";
 import PayoutBg from "../assets/images/payout-bg.webp";
 import Shield from "../assets/images/shield.png";
-import Etherum from "../assets/images/ethereum.png";
-import check from "../assets/images/check.svg";
+import Frame1 from "../assets/images/Frame1.png";
+import Frame2 from "../assets/images/Frame2.png";
+// import Etherum from "../assets/images/ethereum.png";
+// import check from "../assets/images/check.svg";
 import { Link } from "react-router-dom";
 
 // Simple fade-in variant (no movement or scaling)
@@ -17,14 +19,14 @@ const simpleFadeVariant = {
 };
 
 // Text load variant for blurred-to-clear effect
-const textLoadVariant = {
-  hidden: { opacity: 0, filter: "blur(4px)" },
-  visible: {
-    opacity: 1,
-    filter: "blur(0px)",
-    transition: { duration: 0.9, ease: "easeOut" },
-  },
-};
+// const textLoadVariant = {
+//   hidden: { opacity: 0, filter: "blur(4px)" },
+//   visible: {
+//     opacity: 1,
+//     filter: "blur(0px)",
+//     transition: { duration: 0.9, ease: "easeOut" },
+//   },
+// };
 
 const TradingPlatforms = () => {
   return (
@@ -132,7 +134,7 @@ const TradingPlatforms = () => {
               viewport={{ once: true }}
               variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
             >
-              <motion.div
+              {/* <motion.div
                 className="rounded-[28px] border border-[#b6ffc6] border-opacity-10 
     bg-white/5 shadow-[inset_0px_24px_24px_-10px_rgba(1,132,254,0.04)] 
     backdrop-blur-[210px] p-4 flex items-center justify-center"
@@ -154,15 +156,29 @@ const TradingPlatforms = () => {
                     repeat: Infinity,
                   }}
                 />
-              </motion.div>
+              </motion.div> */}
+
+<motion.div
+              className="max-lg:mx-auto block"
+              variants={simpleFadeVariant}
+            >
+              <img src={Frame1} alt="shield" />
+            </motion.div>
+
               <motion.div
+              className="max-lg:mx-auto block"
+              variants={simpleFadeVariant}
+            >
+              <img src={Frame2} alt="shield" />
+            </motion.div>
+              
+              {/* <motion.div
                 className="relative overflow-hidden rounded-[28px] border border-[#b6ffc6] 
                 border-opacity-10 bg-[rgb(255,255,255,0.05)] shadow-[inset_0px_24px_24px_-10px_rgba(1,132,254,0.04)] 
                 backdrop-blur-[210px] p-[50px_24px_24px] flex flex-col justify-end gap-3"
                 variants={simpleFadeVariant}
               >
-                {/* Upgrades Block with text load animation */}
-                <motion.span
+               <motion.span
                   className="text-sm text-[#0F0F0F] h-[44px] px-[26px] bg-[#0EF3A5] absolute top-0 left-0 flex items-center 
                 rounded-[28px_0_28px_0]"
                   variants={textLoadVariant}
@@ -184,8 +200,8 @@ const TradingPlatforms = () => {
                 >
                   <img src={check} alt="check" />
                   <span>HFT Enabled</span>
-                </motion.div>
-              </motion.div>
+                </motion.div> 
+              </motion.div> */}
             </motion.div>
             <motion.ul
               className="grid grid-cols-1  sm:grid-cols-2  gap-6 mt-8"

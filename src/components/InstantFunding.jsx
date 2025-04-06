@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 // import Line from "../assets/images/mid-line.svg";
 import InstantImg from "../assets/images/transform-Img.webp";
@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 const Tabs = ["1-STEP HFT", "EDEN VIP"];
 const Steps = ["Instant", "1-Step"];
 const tabPriceData = {
-  "1-STEP HFT": ["$10k", "$25k", "$50k", "$100k", "$200k", "$300k"],
-  "EDEN VIP": ["$100k"],
+  "1-Step": ["$10k", "$25k", "$50k", "$100k", "$200k", "$300k"],
+  "Instant": ["$100k"],
 };
 
 // Smooth fade in & move up variant
@@ -40,8 +40,12 @@ const containerVariants = {
 
 const InstantFunding = () => {
   const [activeTab, setActiveTab] = useState("1-STEP HFT");
-  const [Step, setStep] = useState("Instant");
-  const [Price, setPrice] = useState(tabPriceData["1-STEP HFT"][0]);
+  const [Step, setStep] = useState("1-Step");
+  const [Price, setPrice] = useState(tabPriceData[Step][0]);
+
+  useEffect(()=>{
+    setPrice(tabPriceData[Step][0])
+  },[Step]);
 
   return (
     <motion.section
@@ -133,7 +137,7 @@ const InstantFunding = () => {
               className="flex flex-wrap w-full justify-between max-md:gap-y-4"
               variants={fadeInUpVariant}
             >
-              {tabPriceData[activeTab].map((pricetab) => (
+              {tabPriceData[Step].map((pricetab) => (
                 <motion.button
                   key={pricetab}
                   className={`relative px-8 py-[10px] h-[46px] rounded-[58px] flex items-center justify-center transition-all duration-500 ease-in-out 
@@ -274,11 +278,11 @@ const InstantFunding = () => {
                 variants={fadeInUpVariant}
               ></motion.div>
               <motion.div
-                className="mt-[20px] p-8 max-md:px-5 max-sm:mt-0 overflow-hidden rounded-[35px] border border-[#B6FFC0] border-opacity-5 bg-[rgba(11,172,117,0.02)]"
+                className="mt-[15px] p-4 max-md:px-5 max-sm:mt-0 overflow-hidden rounded-[35px] border border-[#B6FFC0] border-opacity-5 bg-[rgba(11,172,117,0.02)]"
                 variants={fadeInUpVariant}
               >
                 <motion.div
-                  className="flex justify-between items-center gap-2 max-sm:flex-col max-sm:justify-center"
+                  className="flex-col justify-between items-center gap-8 max-sm:flex-col"
                   variants={fadeInUpVariant}
                 >
                   <motion.p
@@ -289,10 +293,10 @@ const InstantFunding = () => {
                     journey as an Eden-Fx today, manage risks carefully, and
                     enjoy up to 80% for 1-step
                   </motion.p>
-                  {activeTab === "EDEN VIP" && (
-                    <motion.div className="flex flex-col items-end gap-[4px] p-[12px_24px] rounded-[16px] border border-white border-opacity-5 bg-[rgba(11,172,117,0.02)] mt-[-39px] max-sm:mt-0">
-                      <motion.div className="flex items-center gap-2 justify-end max-sm:justify-center">
-                        <motion.span className="text-white text-right text-[24px] font-bold leading-[130%]">
+                
+                  <motion.div className="flex flex-col items-start gap-[10px] mt-2">
+                      <motion.div className="flex items-center justify-end max-sm:justify-center">
+                        <motion.span className="text-[#0EF3A5] text-right text-[24px] font-bold leading-[130%]">
                           $697
                         </motion.span>
                       </motion.div>
@@ -300,7 +304,7 @@ const InstantFunding = () => {
                         For $100k Account
                       </motion.span>
                     </motion.div>
-                  )}
+                  
                 </motion.div>
                 <motion.div
                   className="mt-8"
