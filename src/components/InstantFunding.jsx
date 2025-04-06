@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Line from "../assets/images/mid-line.svg";
+// import Line from "../assets/images/mid-line.svg";
 import InstantImg from "../assets/images/transform-Img.webp";
 import bgTab1 from "../assets/images/bg-tab-1.svg";
 import bgTab2 from "../assets/images/bg-tab-2.svg";
@@ -66,20 +66,22 @@ const InstantFunding = () => {
       </div>
 
       {/* Tabs */}
-      <motion.div className=" max-w-[1260px] w-[95%] mx-auto relative" variants={fadeInUpVariant}
+      <motion.div
+        className=" max-w-[1260px] w-[95%] mx-auto relative"
+        variants={fadeInUpVariant}
       >
-        <div className="flex justify-between relative z-10">
+        <div className="flex flex-wrap gap-2 justify-between relative z-10 max-md:flex-col-reverse max-md:gap-4 max-md:justify-center max-md:items-center">
           <motion.div
-            className="flex flex-wrap max-sm:justify-center max-md:gap-y-4 " 
+            className="flex flex-wrap max-sm:justify-center max-md:gap-y-4  max-md:gap-2"
             variants={fadeInUpVariant}
           >
             {Steps.map((tab) => (
               <motion.button
                 key={tab}
-                className={`relative px-24 py-[10px] h-[76px] flex items-center justify-center transition-all duration-500 ease-in-out text-base text-center leading-none font-medium max-xl:px-20 max-md:px-4 max-md:h-10 border max-md:text-sm ${
+                className={`relative px-[100px] py-[10px] border-opacity-5 h-[76px] flex items-center justify-center transition-all duration-500 ease-in-out text-base text-center leading-none font-medium max-xl:px-20 max-md:px-4 max-md:h-10 border max-md:text-sm ${
                   Step === tab
-                    ? "border-transparent border-opacity-5 text-white rounded-[40px_40px_0_0] border-b-transparent"
-                    : "text-[#fff] border-transparent bg-transparent rounded-[0px_0px_0_40px]"
+                    ? "border-transparent border-opacity-5 text-white rounded-[40px] border-b-transparent max-lg:bg-[rgba(255,255,255,0.10)] max-lg:border-[rgba(255,255,255,0.10)]"
+                    : "text-[#fff] border-transparent bg-transparent rounded-[40px] "
                 }`}
                 onClick={() => setStep(tab)}
               >
@@ -102,12 +104,13 @@ const InstantFunding = () => {
             {Tabs.map((instanttab) => (
               <motion.li
                 key={instanttab}
-                className={`px-8 rounded-[58px] h-[50px] flex items-center justify-center 
-                  cursor-pointer transition-all duration-500 ease-in-out font-medium text-customLightGreen ${
-                  activeTab === instanttab
-                    ? "text-customDark bg-customGreen"
-                    : "bg-black"
-                }`}
+                className={`px-8 rounded-[58px] h-[50px] flex items-center justify-center  max-md:h-11 max-md:px-4
+                  cursor-pointer transition-all duration-500 ease-in-out font-medium text-customLightGreen max-md:text-sm
+                   ${
+                    activeTab === instanttab
+                      ? "text-customDark bg-customGreen"
+                      : "bg-black"
+                  }`}
                 onClick={() => setActiveTab(instanttab)}
               >
                 <motion.span>{instanttab}</motion.span>
@@ -117,7 +120,8 @@ const InstantFunding = () => {
         </div>
 
         <motion.div
-          className="relative z-10 rounded-[0_30px_30px_30px]  border-opacity-5  p-10 pt-4 max-md:px-5"
+          className="relative z-10 rounded-[30px]  border-opacity-5  p-10 pt-4 max-md:px-5
+          max-lg:bg-[255,255,255,0.20] max-lg:border-white"
           variants={fadeInUpVariant}
         >
           <motion.div
@@ -133,11 +137,11 @@ const InstantFunding = () => {
                 <motion.button
                   key={pricetab}
                   className={`relative px-8 py-[10px] h-[46px] rounded-[58px] flex items-center justify-center transition-all duration-500 ease-in-out 
-                    text-base text-center leading-none font-medium max-xl:px-4 max-xl:h-11 max-md:px-4 max-md:h-10 max-md:text-sm ${
-                    Price === pricetab
-                      ? " text-[#0F0F0F] bg-[#0EF3A5]"
-                      : "text-[#fff] border-transparent bg-transparent"
-                  }`}
+                    text-base text-center leading-none font-medium max-xl:px-4 max-xl:h-11 max-md:px-4 max-md:h-10 max-md:text-sm flex-1 ${
+                      Price === pricetab
+                        ? " text-[#0F0F0F] bg-[#0EF3A5]"
+                        : "text-[#fff] border-transparent bg-transparent"
+                    }`}
                   onClick={() => setPrice(pricetab)}
                 >
                   {pricetab}
@@ -159,12 +163,12 @@ const InstantFunding = () => {
             variants={fadeInUpVariant}
           >
             <motion.div
-              className="flex flex-col justify-center items-start gap-[40px] p-[32px] rounded-[30px] border border-[#B6FFC0] border-opacity-5 bg-[rgba(11,172,117,0.02)] max-md:p-5"
+              className="flex flex-col justify-center items-start gap-[20px] p-[32px] rounded-[30px] border border-[#B6FFC0] border-opacity-5 bg-[rgba(11,172,117,0.02)] max-md:p-5"
               variants={fadeInUpVariant}
             >
               <motion.div variants={fadeInUpVariant}>
                 <motion.h3
-                  className="text-white text-[40px] font-medium leading-[130%] max-xl:text-[36px] max-md:text-3xl max-sm:text-2xl"
+                  className="text-white text-[24px] font-medium leading-[130%] max-xl:text-[36px] max-md:text-3xl max-sm:text-2xl"
                   variants={textLoadVariant}
                 >
                   {activeTab === "EDEN VIP"
@@ -172,7 +176,7 @@ const InstantFunding = () => {
                     : "1-Step HFT Challenge"}
                 </motion.h3>
                 <motion.p
-                  className="text-[rgba(216,255,218,0.60)] text-[18px] font-normal leading-[160%] max-w-[490px] mt-2 max-md:text-base"
+                  className="text-[rgba(216,255,218,0.60)] text-[15px] font-normal leading-[160%] max-w-[490px] max-md:text-base"
                   variants={fadeInUpVariant}
                 >
                   Choose your path to funding—complete a challenge or get
@@ -181,94 +185,88 @@ const InstantFunding = () => {
               </motion.div>
 
               <motion.ul
-                className="flex flex-col w-full gap-8 max-md:gap-4"
+                className="flex flex-col w-full gap-2.5 font-poppins"
                 variants={containerVariants}
               >
                 <motion.li
-                  className="flex justify-between items-center w-full"
+                  className="flex justify-between items-center w-full bg-[rgba(255,255,255,0.05)] py-3 px-4 rounded-[35px]"
                   variants={fadeInUpVariant}
                 >
                   <span
-                    className="text-white text-[16px] font-medium leading-[100%] max-sm:text-xs"
+                    className="text-white text-[14px] leading-[100%] max-sm:text-xs"
                     variants={textLoadVariant}
                   >
                     Maximum Daily Loss
                   </span>
-                  <div className="w-full max-w-[60%] max-xl:max-w-[40%]">
-                    <img src={Line} alt="line" className="w-full min-h-[1px]" />
-                  </div>
+
                   <span
-                    className="flex flex-col justify-center items-center gap-[10px] h-[32px] px-[16px] py-[4px] rounded-[80px] bg-white/10 text-center text-white text-[16px] font-medium leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3"
+                    className="flex flex-col justify-center items-center gap-[10px] h-[32px] text-center text-white text-[14px] leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3"
                     variants={textLoadVariant}
                   >
                     4% daily loss
                   </span>
                 </motion.li>
+
                 <motion.li
-                  className="flex justify-between items-center w-full"
+                  className="flex justify-between items-center w-full bg-[rgba(255,255,255,0.05)] py-3 px-4 rounded-[35px]"
                   variants={fadeInUpVariant}
                 >
-                  <span className="text-white text-[16px] font-medium leading-[100%] max-sm:text-xs">
+                  <span className="text-white text-[14px] leading-[100%] max-sm:text-xs">
                     Maximum Loss
                   </span>
-                  <div className="w-full max-w-[60%] max-xl:max-w-[40%]">
-                    <img src={Line} alt="line" className="w-full min-h-[1px]" />
-                  </div>
-                  <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] px-[16px] py-[4px] rounded-[80px] bg-white/10 text-center text-white text-[16px] font-medium leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
+
+                  <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] text-center text-white text-[14px] leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
                     8% max loss
                   </span>
                 </motion.li>
+
                 <motion.li
-                  className="flex justify-between items-center w-full"
+                  className="flex justify-between items-center w-full bg-[rgba(255,255,255,0.05)] py-3 px-4 rounded-[35px]"
                   variants={fadeInUpVariant}
                 >
-                  <span className="text-white text-[16px] font-medium leading-[100%] max-sm:text-xs">
+                  <span className="text-white text-[14px] leading-[100%] max-sm:text-xs">
                     Account Leverage
                   </span>
-                  <div className="w-full max-w-[60%] max-xl:max-w-[40%]">
-                    <img src={Line} alt="line" className="w-full min-h-[1px]" />
-                  </div>
-                  <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] px-[16px] py-[4px] rounded-[80px] bg-white/10 text-center text-white text-[16px] font-medium leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
+
+                  <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] text-center text-white text-[14px] leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
                     1:100 leverage
                   </span>
                 </motion.li>
+
                 <motion.li
-                  className="flex justify-between items-center w-full"
+                  className="flex justify-between items-center w-full bg-[rgba(255,255,255,0.05)] py-3 px-4 rounded-[35px]"
                   variants={fadeInUpVariant}
                 >
-                  <span className="text-white text-[16px] font-medium leading-[100%] max-sm:text-xs">
+                  <span className="text-white text-[14px] leading-[100%] max-sm:text-xs">
                     Payouts
                   </span>
-                  <div className="w-full max-w-[60%] max-xl:max-w-[40%]">
-                    <img src={Line} alt="line" className="w-full min-h-[1px]" />
-                  </div>
-                  <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] px-[16px] py-[4px] rounded-[80px] bg-white/10 text-center text-white text-[16px] font-medium leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
+
+                  <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] text-center text-white text-[14px] leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
                     Every 5 days
                   </span>
                 </motion.li>
+
                 <motion.li
-                  className="flex justify-between items-center w-full"
+                  className="flex justify-between items-center w-full bg-[rgba(255,255,255,0.05)] py-3 px-4 rounded-[35px]"
                   variants={fadeInUpVariant}
                 >
-                  <span className="text-white text-[16px] font-medium leading-[100%] max-sm:text-xs">
+                  <span className="text-white text-[14px] leading-[100%] max-sm:text-xs">
                     Profit Split
                   </span>
-                  <div className="w-full max-w-[60%] max-xl:max-w-[40%]">
-                    <img src={Line} alt="line" className="w-full min-h-[1px]" />
-                  </div>
-                  <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] px-[16px] py-[4px] rounded-[80px] bg-white/10 text-center text-white text-[16px] font-medium leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
-                    {activeTab === "EDEN VIP" ? "Up t0 80%" : "75%"}
+
+                  <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] text-center text-white text-[14px] leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
+                    {activeTab === "EDEN VIP" ? "Up to 80%" : "75%"}
                   </span>
                 </motion.li>
               </motion.ul>
             </motion.div>
-
+            {/* col Right Tbs */}
             <motion.div
-              className="flex flex-col overflow-hidden rounded-[30px] border border-[#B6FFC0] border-opacity-5 bg-[rgba(11,172,117,0.02)]"
+              className="flex flex-col "
               variants={fadeInUpVariant}
             >
               <motion.div
-                className="w-full h-[247px] bg-cover max-sm:h-[200px]"
+                className="w-full h-[247px] bg-cover max-sm:h-[200px] overflow-hidden rounded-[35px] border border-[#B6FFC0] border-opacity-5 bg-[rgba(11,172,117,0.02)]"
                 style={{
                   background: `                        
                               url(${InstantImg}) center / cover no-repeat`,
@@ -276,7 +274,7 @@ const InstantFunding = () => {
                 variants={fadeInUpVariant}
               ></motion.div>
               <motion.div
-                className="mt-[38px] p-8 max-md:px-5 max-sm:mt-0"
+                className="mt-[20px] p-8 max-md:px-5 max-sm:mt-0 overflow-hidden rounded-[35px] border border-[#B6FFC0] border-opacity-5 bg-[rgba(11,172,117,0.02)]"
                 variants={fadeInUpVariant}
               >
                 <motion.div
@@ -292,40 +290,22 @@ const InstantFunding = () => {
                     enjoy up to 80% for 1-step
                   </motion.p>
                   {activeTab === "EDEN VIP" && (
-                    <motion.div
-                      className="flex flex-col items-end gap-[4px] p-[12px_24px] rounded-[16px] border border-white border-opacity-5 bg-[rgba(11,172,117,0.02)] mt-[-39px] max-sm:mt-0"
-                    >
-                      <motion.div
-                        className="flex items-center gap-2 justify-end max-sm:justify-center"
-                      >
-                        <motion.span
-                          className="text-white text-right text-[24px] font-bold leading-[130%]"
-                        >
+                    <motion.div className="flex flex-col items-end gap-[4px] p-[12px_24px] rounded-[16px] border border-white border-opacity-5 bg-[rgba(11,172,117,0.02)] mt-[-39px] max-sm:mt-0">
+                      <motion.div className="flex items-center gap-2 justify-end max-sm:justify-center">
+                        <motion.span className="text-white text-right text-[24px] font-bold leading-[130%]">
                           $697
                         </motion.span>
                       </motion.div>
-                      <motion.span
-                        className="text-[rgba(216,255,222,0.40)] text-right text-[16px] font-medium leading-[130%]"
-                      >
+                      <motion.span className="text-[rgba(216,255,222,0.40)] text-right text-[16px] font-medium leading-[130%]">
                         For $100k Account
                       </motion.span>
                     </motion.div>
                   )}
                 </motion.div>
-                <motion.ul
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8"
-                  variants={containerVariants}
+                <motion.div
+                  className="mt-8"
+                  variants={fadeInUpVariant}
                 >
-                  <motion.li variants={fadeInUpVariant}>
-                    <Link
-                      to="https://dashboard.eden-fx.com/auth/sign-up"
-                      target="_blank"
-                      className="btn font-syne text-customLightGreen bg-customTransparentWhite px-10"
-                    >
-                      Learn more
-                    </Link>
-                  </motion.li>
-                  <motion.li variants={fadeInUpVariant}>
                     <Link
                       to="https://dashboard.eden-fx.com/auth/sign-up"
                       target="_blank"
@@ -333,46 +313,45 @@ const InstantFunding = () => {
                     >
                       Get Funded
                     </Link>
-                  </motion.li>
-                </motion.ul>
+                </motion.div>
               </motion.div>
             </motion.div>
           </motion.div>
         </motion.div>
         {/* Background 1 */}
-  <div 
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      backgroundImage: `url(${bgTab1})`,
-      backgroundPosition: "top left",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-      opacity: Step === "Instant" ? 1 : 0,
-      transition: "opacity 0.5s ease-in-out",
-      zIndex: 0,
-    }}
-  />
-  {/* Background 2 */}
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      backgroundImage: `url(${bgTab2})`,
-      backgroundPosition: "top left",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "contain",
-      opacity: Step === "Instant" ? 0 : 1,
-      transition: "opacity 0.5s ease-in-out",
-      zIndex: 0,
-    }}
-  />
+        <div className="max-lg:hidden"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundImage: `url(${bgTab1})`,
+            backgroundPosition: "top left",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            opacity: Step === "Instant" ? 1 : 0,
+            transition: "opacity 0.5s ease-in-out",
+            zIndex: 0,
+          }}
+        />
+        {/* Background 2 */}
+        <div  className="max-lg:hidden"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundImage: `url(${bgTab2})`,
+            backgroundPosition: "top left",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            opacity: Step === "Instant" ? 0 : 1,
+            transition: "opacity 0.5s ease-in-out",
+            zIndex: 0,
+          }}
+        />
       </motion.div>
     </motion.section>
   );

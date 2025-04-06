@@ -20,6 +20,7 @@ module.exports = {
       },
       fontFamily: {
         syne: ["Syne", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
         "line-bg":
