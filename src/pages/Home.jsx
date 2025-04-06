@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 import Evaluation from "../components/Evaluation";
 import Elements from "../components/Elements";
 import HowItsWork from "../components/HowItsWork";
-import Products from "../components/Products";
+// import Products from "../components/Products";
 import Reviews from "../components/Reviews";
 import Faqs from "../components/Faqs";
 import ContactNow from "../components/ContactNow";
@@ -35,7 +35,7 @@ const Home = () => {
       <HowItsWork />
       <TradingPlatforms />
       <TrustBoxWidget />
-      <Products />
+      {/* <Products /> */}
       <InstantFunding/>
 
       <Reviews />
