@@ -38,7 +38,24 @@ body::-webkit-scrollbar-thumb {
   outline: 0.5px solid #fff;
   border-radius: 30px;
 }
-
+#tp-widget-wrapper {
+  color: #fff !important;
+}
+.tp-widget-wrapper a {
+  color: #fff !important;
+}
+.translations-customerssay {
+  color: #fff !important;
+}
+.translations-customerssay a {
+  color: #fff !important;
+}
+#trust-score {
+  color: #fff !important;
+}
+#tp-widget-rating {
+  color: #fff !important;
+}
 .faqs::-webkit-scrollbar {
   width: 4px;
 }

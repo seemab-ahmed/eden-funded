@@ -16,6 +16,7 @@ const TrustBoxWidget = () => {
         href="https://www.trustpilot.com/review/eden-funding.com"
         target="_blank"
         rel="noopener noreferrer"
+        style={{color:"#fff"}}
       >
         Trustpilot
       </a>
