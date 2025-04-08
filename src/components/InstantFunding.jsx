@@ -6,13 +6,20 @@ import bgTab1 from "../assets/images/bg-tab-1.svg";
 import bgTab2 from "../assets/images/bg-tab-2.svg";
 import { Link } from "react-router-dom";
 
-const Tabs = ["1-STEP HFT", "EDEN VIP"];
 const Steps = ["Instant", "1-Step"];
 const tabPriceData = {
   "1-Step": ["$10k", "$25k", "$50k", "$100k", "$200k", "$300k"],
   "Instant": ["$100k"],
 };
 
+const stepsPrice = {
+  "$10k": 197,
+  "$25k": 297,
+  "$50k": 397,
+  "$100k": 597,
+  "$200k": 997,
+  "$300k": 1397,
+};
 // Smooth fade in & move up variant
 const fadeInUpVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -39,7 +46,6 @@ const containerVariants = {
 };
 
 const InstantFunding = () => {
-  const [activeTab, setActiveTab] = useState("1-STEP HFT");
   const [Step, setStep] = useState("1-Step");
   const [Price, setPrice] = useState(tabPriceData[Step][0]);
 
@@ -58,7 +64,7 @@ const InstantFunding = () => {
       <div className="container max-w-[1620px]">
         <motion.div className="text-center" variants={fadeInUpVariant}>
           <motion.h2 className="heading-2 text-5xl text-customWhite mb-4 max-md:text-[32px]">
-            {activeTab === "EDEN VIP"
+            {Step === "1-Step"
               ? "Unlock Sim-Funded Accounts"
               : "Unlock Instant Funding"}
           </motion.h2>
@@ -101,26 +107,7 @@ const InstantFunding = () => {
               </motion.button>
             ))}
           </motion.div>
-          <motion.ul
-            className="grid grid-cols-2 mb-2.5 sm:grid-cols-2 gap-0 max-w-[336px] p-2 rounded-[50px] border border-[#D9D9D9]"
-            variants={containerVariants}
-          >
-            {Tabs.map((instanttab) => (
-              <motion.li
-                key={instanttab}
-                className={`px-8 rounded-[58px] h-[50px] flex items-center justify-center  max-md:h-11 max-md:px-4
-                  cursor-pointer transition-all duration-500 ease-in-out font-medium text-customLightGreen max-md:text-sm
-                   ${
-                    activeTab === instanttab
-                      ? "text-customDark bg-customGreen"
-                      : "bg-black"
-                  }`}
-                onClick={() => setActiveTab(instanttab)}
-              >
-                <motion.span>{instanttab}</motion.span>
-              </motion.li>
-            ))}
-          </motion.ul>
+          
         </div>
 
         <motion.div
@@ -175,7 +162,7 @@ const InstantFunding = () => {
                   className="text-white text-[24px] font-medium leading-[130%] max-xl:text-[36px] max-md:text-3xl max-sm:text-2xl"
                   variants={textLoadVariant}
                 >
-                  {activeTab === "EDEN VIP"
+                  {Step === "Instant"
                     ? "Unlock Instant Funding"
                     : "1-Step HFT Challenge"}
                 </motion.h3>
@@ -259,7 +246,7 @@ const InstantFunding = () => {
                   </span>
 
                   <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] text-center text-white text-[14px] leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
-                    {activeTab === "EDEN VIP" ? "Up to 80%" : "75%"}
+                    {Step === "Instant" ? "Up to 80%" : "50% / 70% / 80%"}
                   </span>
                 </motion.li>
               </motion.ul>
@@ -291,17 +278,17 @@ const InstantFunding = () => {
                   >
                     Bypass the challenge and receive instant funding. Begin your
                     journey as an Eden-Fx today, manage risks carefully, and
-                    enjoy up to 80% for 1-step
+                    enjoy {Step === "Instant" ? "Up to 80%" : "50% / 70% / 80%"} for {Step}
                   </motion.p>
                 
                   <motion.div className="flex flex-col items-start gap-[10px] mt-2">
                       <motion.div className="flex items-center justify-end max-sm:justify-center">
                         <motion.span className="text-[#0EF3A5] text-right text-[24px] font-bold leading-[130%]">
-                          $697
+                          $ {Step === "Instant" ? 697 : stepsPrice[Price]}
                         </motion.span>
                       </motion.div>
                       <motion.span className="text-[rgba(216,255,222,0.40)] text-right text-[16px] font-medium leading-[130%]">
-                        For $100k Account
+                        For {Price} Account
                       </motion.span>
                     </motion.div>
                   
