@@ -103,7 +103,7 @@ const TradingPlatforms = () => {
                 variants={simpleFadeVariant}
               >
                 Funded accounts are a monetized demo account with a
-                70% lifetime profit split - we are now scaling 50,70,80 with 1 - step 
+                70% lifetime profit split —— we are now scaling 50,70,80 with 1 - step 
                 and 75% lifetime with Eden VIP
               </motion.p>
             </div>
