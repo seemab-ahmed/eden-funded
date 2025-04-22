@@ -66,7 +66,7 @@ const Elements = () => {
             >
               After the 1-Step Challenge phase, successful traders unlock
               virtual funding ensuring a low-risk yet rewarding simulated trading
-              experience up to 500k.
+              experience up to 600k.
             </motion.p>
             <motion.p
               className="para-1 text-customGray mb-4"

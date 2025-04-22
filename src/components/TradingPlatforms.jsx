@@ -96,15 +96,15 @@ const TradingPlatforms = () => {
                 className="text-[#FDFEFE] text-left 2xl:text-4xl xl:text-3xl max-xl:text-[28px] max-lg:text-3xl font-medium leading-[1.2] mb-3"
                 variants={simpleFadeVariant}
               >
-                Payout Guarantee
+                Join the new era of funding account
               </motion.h4>
               <motion.p
                 className="text-[#CFD6D3] text-xl leading-[1.4] text-left max-2xl:text-lg max-md:text-base"
                 variants={simpleFadeVariant}
               >
-                At Eden Funding, we value your time and success. That’s why we
-                guarantee you'll receive your payment within 72 hours, or we’ll
-                add an extra $500 to your payout
+                Funded accounts are a monetized demo account with a
+                70% lifetime profit split - we are now scaling 50,70,80 with 1 - step 
+                and 75% lifetime with Eden VIP
               </motion.p>
             </div>
             <motion.div
