@@ -58,7 +58,7 @@ const Trade = () => {
             max-sm:text-sm  max-[420px]:mt-7"
             variants={fadeInUpVariant}
           >
-            Unlock up to 500K in maximum simulated funding and elevate your trading potential with expert strategies.
+            Unlock up to 600K in maximum simulated funding and elevate your trading potential with expert strategies.
           </motion.p>
           <motion.div variants={fadeInUpVariant}>
             <Link

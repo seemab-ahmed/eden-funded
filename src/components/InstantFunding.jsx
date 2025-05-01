@@ -233,7 +233,7 @@ const InstantFunding = () => {
                   </span>
 
                   <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] text-center text-white text-[14px] leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
-                    Every 5 days
+                   {Step === "Instant" ? "Every 5 days" : "14 days/Bi-weekely"}
                   </span>
                 </motion.li>
 
@@ -246,7 +246,7 @@ const InstantFunding = () => {
                   </span>
 
                   <span className="flex flex-col justify-center items-center gap-[10px] h-[32px] text-center text-white text-[14px] leading-[100%] whitespace-nowrap max-sm:text-xs max-sm:h-7 max-sm:px-3">
-                    {Step === "Instant" ? "Up to 80%" : "50% / 70% / 80%"}
+                    {Step === "Instant" ? "Up to 75%" : "50% / 70% / 80%"}
                   </span>
                 </motion.li>
               </motion.ul>
@@ -278,7 +278,7 @@ const InstantFunding = () => {
                   >
                     Bypass the challenge and receive instant funding. Begin your
                     journey as an Eden-Fx today, manage risks carefully, and
-                    enjoy {Step === "Instant" ? "Up to 80%" : "50% / 70% / 80%"} for {Step}
+                    enjoy {Step === "Instant" ? "Up to 75%" : "50% / 70% / 80%"} for {Step}
                   </motion.p>
                 
                   <motion.div className="flex flex-col items-start gap-[10px] mt-2">

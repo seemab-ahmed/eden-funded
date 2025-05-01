@@ -21,7 +21,7 @@ const Home = () => {
     <main >
       <Banner
         preheader="Welcome to Eden Funding"
-        heading="Unlock Up To 500k"
+        heading="Unlock Up To 600k"
         description="In Simulated Funding, Powered By MT5"
         btnText="Start"
         isHome={true}
