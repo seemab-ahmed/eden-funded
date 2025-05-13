@@ -8,4 +8,4 @@ const OffCode = () => {
   )
 }
 
-export default OffCode
+export default OffCode;
