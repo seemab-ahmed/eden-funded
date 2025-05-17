@@ -72,7 +72,7 @@ const Elements = () => {
               className="para-1 text-customGray mb-4"
               variants={itemVariants}
             >
-              All accounts are accessible via MT5 on both PC and Mobile, so you
+              All accounts are accessible via Platform 5 on both PC and Mobile, so you
               can trade anytime, anywhere.
             </motion.p>
             <motion.div variants={itemVariants}>
