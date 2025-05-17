@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: "What platform do you use?",
-    answer: "Platform 5 — Accessible via mobile MT5 or PC."
+    answer: "Platform 5 — Accessible via mobile Platform 5 or PC."
   },
   {
     question: "Are U.S. traders allowed?",
@@ -62,7 +62,7 @@ const faqData = [
   },
   {
     question: "Request a Payout",
-    answer: "Send an email to support@eden-fx.com from your registered email.\n Include:\n 1. 'I would like to request a payout'\n 2. Your MT5 account number\n3. Wallet address\n Stop trading after sending the request.\nPayouts processed within 1–3 business days."
+    answer: "Send an email to support@eden-fx.com from your registered email.\n Include:\n 1. 'I would like to request a payout'\n 2. Your Platform 5 account number\n3. Wallet address\n Stop trading after sending the request.\nPayouts processed within 1–3 business days."
   },
   {
     question: "Weekend Trading",
